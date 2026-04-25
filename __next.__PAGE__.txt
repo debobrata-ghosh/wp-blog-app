@@ -1219,6 +1219,6 @@
         </div>
     </section>
     
-0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"mx-auto w-full","children":["$","div",null,{"className":"wp-content prose prose-zinc max-w-none dark:prose-invert","dangerouslySetInnerHTML":{"__html":"$2"}}]}],null,"$L3"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"VkqBZEBR2Nwg9yNJfLYEN"}
+0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"mx-auto w-full","children":["$","div",null,{"className":"wp-content prose prose-zinc max-w-none dark:prose-invert","dangerouslySetInnerHTML":{"__html":"$2"}}]}],null,"$L3"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"4rrOBPHgEYw7xBHrBqCrq"}
 3:["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]
 6:null

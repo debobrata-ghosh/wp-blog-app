@@ -21,4 +21,4 @@
 :HL["http://localhost/unitek-rebuild/wp-content/themes/unitekcollage/images/UC-Side-Stack.png","image"]
 :HL["http://localhost/unitek-rebuild/wp-content/themes/unitekcollage/images/1920-Wave.png","image"]
 :HL["http://localhost/unitek-rebuild/wp-content/uploads/2025/10/UC-Lndscp-R.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"dummy-post-20","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"VkqBZEBR2Nwg9yNJfLYEN"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"dummy-post-20","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"4rrOBPHgEYw7xBHrBqCrq"}
