@@ -1,0 +1,1224 @@
+1:"$Sreact.fragment"
+4:I[97367,["/wp-blog-app/_next/static/chunks/0t0~vf8vpn6e-.js","/wp-blog-app/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+2:T173ff,
+<p></p>
+
+
+
+<section  
+         class="hero-block"
+         role="region"
+         aria-label="Hero section">
+    <div class="hero-container">
+        <!-- Left Column - Text Content -->
+        <div class="hero-text-column">
+            <div class="hero-content">
+                                    <h1 class="hero-headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                                                    <p class="hero-subheadline">Headline payoff/lead-in copy lorem ipsum sit amemt dolor.</p>
+                            </div>
+        </div>
+        
+        <!-- Right Column - Image -->
+        <div class="hero-image-column">
+                            <div class="hero-image-wrapper">
+                    <img decoding="async" src="http://localhost/unitek-rebuild/wp-content/uploads/2025/09/ganesh-chaturthi-wishes-2025.png" 
+                         alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
+                         class="hero-image"
+                         loading="lazy"
+                         width="800"
+                         height="800">
+                </div>
+                    </div>
+    </div>
+</section>
+
+
+
+<section  
+         class="hero-get-started-block"
+         role="region"
+         aria-label="Get started form section">
+    
+    <div class="hero-get-started-content">
+        <!-- Left Section - Heading Text -->
+        <div class="hero-get-started-text">
+            Get started today.        </div>
+        
+        <!-- Right Section - Multi-step Form -->
+        <form class="hero-get-started-form" method="post" action="" id="hgs-form" novalidate onsubmit="handleFormSubmit(event)">
+            <div class="hgs-steps">
+                <!-- Step 1: Campus Selection -->
+                <div class="hgs-step active" data-step="1">
+                    <select class="hgs-select" name="campus_interest" id="hgs-campus" aria-label="Campus of interest" required onchange="var nextBtn=document.getElementById('hgs-next');if(this.value!=''){this.style.color='#ffffff';this.style.fontWeight='500';this.style.backgroundColor='transparent';nextBtn.disabled=false;nextBtn.classList.add('active');nextBtn.style.backgroundColor='#B4E850';nextBtn.style.color='#28323C';nextBtn.style.cursor='pointer';}else{this.style.color='#68747C';this.style.fontWeight='300';this.style.backgroundColor='#ffffff';nextBtn.disabled=true;nextBtn.classList.remove('active');nextBtn.style.backgroundColor='#68747C';nextBtn.style.color='#28323C';nextBtn.style.cursor='not-allowed';}">
+                        <option value="" disabled selected>CAMPUS OF INTEREST*</option>
+                        <option value="Unitek College - Bakersfield">Bakersfield, CA</option>
+                        <option value="Unitek College - Concord">Concord, CA</option>
+                        <option value="Unitek College - Fremont">Fremont, CA</option>
+                        <option value="Unitek College - Hayward">Hayward, CA</option>
+                        <option value="Unitek College - Ontario">Ontario, CA</option>
+                        <option value="Unitek College - Reno">Reno, NV</option>
+                        <option value="Unitek College - Sacramento">Sacramento, CA</option>
+                        <option value="Unitek College - San Jose">San Jose, CA</option>
+                        <option value="Unitek College - South San Francisco">South San Francisco, CA</option>
+                        <option value="Unitek College - Online">Online Instruction</option>
+                    </select>
+                </div>
+
+                <!-- Step 2: Program Selection -->
+                <div class="hgs-step" data-step="2">
+                    <select class="hgs-select" name="program_interest" id="hgs-program" aria-label="Program of interest" required onchange="var nextBtn=document.getElementById('hgs-next');if(this.value!=''){this.style.color='#ffffff';this.style.fontWeight='500';this.style.backgroundColor='transparent';nextBtn.disabled=false;nextBtn.classList.add('active');nextBtn.style.backgroundColor='#B4E850';nextBtn.style.color='#28323C';nextBtn.style.cursor='pointer';}else{this.style.color='#68747C';this.style.fontWeight='300';this.style.backgroundColor='#ffffff';nextBtn.disabled=true;nextBtn.classList.remove('active');nextBtn.style.backgroundColor='#68747C';nextBtn.style.color='#28323C';nextBtn.style.cursor='not-allowed';}">
+                        <option value="" disabled selected>What is your program of interest?</option>
+                                                    <option value="sdfdsf">dfdsf</option>
+                                            </select>
+                </div>
+
+                <!-- Step 3: First Name -->
+                <div class="hgs-step" data-step="3">
+                    <input type="text" class="hgs-input" name="first_name" id="hgs-first" placeholder="First name" required oninput="var nextBtn=document.getElementById('hgs-next');if(this.value.trim()!=''){this.style.color='#ffffff';this.style.fontWeight='500';this.style.backgroundColor='transparent';nextBtn.disabled=false;nextBtn.classList.add('active');nextBtn.style.backgroundColor='#B4E850';nextBtn.style.color='#28323C';nextBtn.style.cursor='pointer';}else{this.style.color='#68747C';this.style.fontWeight='300';this.style.backgroundColor='#ffffff';nextBtn.disabled=true;nextBtn.classList.remove('active');nextBtn.style.backgroundColor='#68747C';nextBtn.style.color='#28323C';nextBtn.style.cursor='not-allowed';}">
+                </div>
+
+                <!-- Step 4: Last Name -->
+                <div class="hgs-step" data-step="4">
+                    <input type="text" class="hgs-input" name="last_name" id="hgs-last" placeholder="Last name" required oninput="var nextBtn=document.getElementById('hgs-next');if(this.value.trim()!=''){this.style.color='#ffffff';this.style.fontWeight='500';this.style.backgroundColor='transparent';nextBtn.disabled=false;nextBtn.classList.add('active');nextBtn.style.backgroundColor='#B4E850';nextBtn.style.color='#28323C';nextBtn.style.cursor='pointer';}else{this.style.color='#68747C';this.style.fontWeight='300';this.style.backgroundColor='#ffffff';nextBtn.disabled=true;nextBtn.classList.remove('active');nextBtn.style.backgroundColor='#68747C';nextBtn.style.color='#28323C';nextBtn.style.cursor='not-allowed';}">
+                </div>
+
+                <!-- Step 5: Phone -->
+                <div class="hgs-step" data-step="5">
+                    <input type="tel" class="hgs-input" name="phone" id="hgs-phone" placeholder="Mobile phone" required pattern="[0-9]{10}" maxlength="10" inputmode="numeric" oninput="validatePhoneInput(this)">
+                </div>
+
+                <!-- Step 6: Email + Consent -->
+                <div class="hgs-step" data-step="6">
+                    <div class="hgs-step-row">
+                        <input type="email" class="hgs-input" name="email" id="hgs-email" placeholder="Email address" required oninput="validateEmailInput(this)">
+                        <button type="submit" class="hero-get-started-button" id="hgs-submit" disabled>Get started</button>
+                    </div>
+                    <label class="hgs-consent">
+                        <input type="checkbox" id="hgs-consent" required onchange="validateConsentInput(this)">
+                        <span>By submitting contact information on this website, you are consenting to receive calls, SMS and emails from Unitek Learning Education Group Corp (ULEGC) and its affiliates. Your information will not be sold or shared with parties unrelated to ULEGC. You certify that you are the owner of the contact information provided and agree to our privacy policy. Please note, this consent is not required to attend our institutions.</span>
+                    </label>
+                </div>
+
+                <!-- Actions (right) -->
+                <div class="hgs-actions">
+                    <button type="button" class="hero-get-started-button" id="hgs-next" disabled onclick="goToNextStep()">Next</button>
+                    <button type="submit" class="hero-get-started-button hgs-hidden" id="hgs-submit-mobile" disabled>Get started</button>
+                </div>
+
+                <!-- Progress row below -->
+                <div class="hgs-progress">
+                    <button type="button" class="hgs-back hgs-hidden" id="hgs-back" aria-label="Back" onclick="goToPreviousStep()">← Back</button>
+                    <div class="hgs-progress-bar" aria-hidden="true"><span id="hgs-progress"></span></div>
+                    <div class="hgs-progress-text" id="hgs-progress-text">1 of 6</div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Confirmation Message -->
+    <div class="confirmation-message" id="confirmation-message" style="display: none;">
+        <h2>You&#8217;ve just completed your first step toward an exciting new career.</h2>
+        <div class="confirmation-content">
+            <div class="confirmation-msg">
+                <p>An Admissions Representative will be contacting you shortly. If you have any questions, please call us directly at <span class="phone-number">(661) 347 2158</span></p>
+            </div>
+            <div class="contact-details">
+                <a href="tel:6613472158" class="contact-link">Additional contact information</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section  
+         class="home-overview-block"
+         role="region"
+         aria-label="Home overview section">
+    
+    <div class="home-overview-content">
+        <!-- Left Column - Headline and Description -->
+        <div class="home-overview-left">
+                            <h2 class="home-overview-headline">Not all careers reward compassion. In healthcare, it’s your greatest asset.</h2>
+                                        <div class="home-overview-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+                    </div>
+        
+        <!-- Right Column - Statistics -->
+        <div class="home-overview-right">
+                            <div class="home-overview-stat" data-stat-index="0">
+                    <div class="home-overview-stat-row">
+                        <div class="home-overview-stat-value">98%</div>
+                        <div class="home-overview-stat-description" role="button" tabindex="0" aria-expanded="false" aria-controls="stat-content-0">
+                            <span class="home-overview-stat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                            <svg class="home-overview-stat-arrow" width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_arrow_0" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-5" y="-5" width="26" height="26">
+                                <rect x="-4.54554" y="-4.10915" width="24.6549" height="24.6549" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_arrow_0)">
+                                <path d="M6.75441 12.5072V1.02729C6.75441 0.736222 6.85286 0.492241 7.04975 0.295345C7.24665 0.0984483 7.49063 0 7.7817 0C8.07276 0 8.31674 0.0984483 8.51364 0.295345C8.71053 0.492241 8.80898 0.736222 8.80898 1.02729V12.5072L13.8427 7.47351C14.0481 7.26805 14.2878 7.1696 14.5618 7.17816C14.8357 7.18673 15.0754 7.29373 15.2809 7.49919C15.4692 7.70465 15.5677 7.94435 15.5762 8.21829C15.5848 8.49223 15.4863 8.73194 15.2809 8.93739L8.5008 15.7175C8.39807 15.8202 8.28678 15.893 8.16693 15.9358C8.04708 15.9786 7.91867 16 7.7817 16C7.64472 16 7.51631 15.9786 7.39646 15.9358C7.27661 15.893 7.16532 15.8202 7.06259 15.7175L0.282504 8.93739C0.0941679 8.74906 0 8.51364 0 8.23113C0 7.94863 0.0941679 7.70465 0.282504 7.49919C0.487961 7.29373 0.731942 7.19101 1.01445 7.19101C1.29695 7.19101 1.54093 7.29373 1.74639 7.49919L6.75441 12.5072Z" fill="currentColor"/>
+                            </g>
+                        </svg>
+                        </div>
+                    </div>
+                    <div class="home-overview-stat-content" id="stat-content-0">
+                        <div class="home-overview-stat-expanded-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.                        </div>
+                                                    <a href="https://example.com" class="home-overview-stat-read-more">
+                                Read more
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12h14m0 0l-7-7m7 7l-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                                            </div>
+                </div>
+                                    <!-- Divider line between stats -->
+                                            <div class="home-overview-stat" data-stat-index="1">
+                    <div class="home-overview-stat-row">
+                        <div class="home-overview-stat-value">100%</div>
+                        <div class="home-overview-stat-description" role="button" tabindex="0" aria-expanded="false" aria-controls="stat-content-1">
+                            <span class="home-overview-stat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                            <svg class="home-overview-stat-arrow" width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_arrow_1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-5" y="-5" width="26" height="26">
+                                <rect x="-4.54554" y="-4.10915" width="24.6549" height="24.6549" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_arrow_1)">
+                                <path d="M6.75441 12.5072V1.02729C6.75441 0.736222 6.85286 0.492241 7.04975 0.295345C7.24665 0.0984483 7.49063 0 7.7817 0C8.07276 0 8.31674 0.0984483 8.51364 0.295345C8.71053 0.492241 8.80898 0.736222 8.80898 1.02729V12.5072L13.8427 7.47351C14.0481 7.26805 14.2878 7.1696 14.5618 7.17816C14.8357 7.18673 15.0754 7.29373 15.2809 7.49919C15.4692 7.70465 15.5677 7.94435 15.5762 8.21829C15.5848 8.49223 15.4863 8.73194 15.2809 8.93739L8.5008 15.7175C8.39807 15.8202 8.28678 15.893 8.16693 15.9358C8.04708 15.9786 7.91867 16 7.7817 16C7.64472 16 7.51631 15.9786 7.39646 15.9358C7.27661 15.893 7.16532 15.8202 7.06259 15.7175L0.282504 8.93739C0.0941679 8.74906 0 8.51364 0 8.23113C0 7.94863 0.0941679 7.70465 0.282504 7.49919C0.487961 7.29373 0.731942 7.19101 1.01445 7.19101C1.29695 7.19101 1.54093 7.29373 1.74639 7.49919L6.75441 12.5072Z" fill="currentColor"/>
+                            </g>
+                        </svg>
+                        </div>
+                    </div>
+                    <div class="home-overview-stat-content" id="stat-content-1">
+                        <div class="home-overview-stat-expanded-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.                        </div>
+                                                    <a href="https://example.com" class="home-overview-stat-read-more">
+                                Read more
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12h14m0 0l-7-7m7 7l-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                                            </div>
+                </div>
+                                    <!-- Divider line between stats -->
+                                            <div class="home-overview-stat" data-stat-index="2">
+                    <div class="home-overview-stat-row">
+                        <div class="home-overview-stat-value">$143%</div>
+                        <div class="home-overview-stat-description" role="button" tabindex="0" aria-expanded="false" aria-controls="stat-content-2">
+                            <span class="home-overview-stat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                            <svg class="home-overview-stat-arrow" width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_arrow_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-5" y="-5" width="26" height="26">
+                                <rect x="-4.54554" y="-4.10915" width="24.6549" height="24.6549" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_arrow_2)">
+                                <path d="M6.75441 12.5072V1.02729C6.75441 0.736222 6.85286 0.492241 7.04975 0.295345C7.24665 0.0984483 7.49063 0 7.7817 0C8.07276 0 8.31674 0.0984483 8.51364 0.295345C8.71053 0.492241 8.80898 0.736222 8.80898 1.02729V12.5072L13.8427 7.47351C14.0481 7.26805 14.2878 7.1696 14.5618 7.17816C14.8357 7.18673 15.0754 7.29373 15.2809 7.49919C15.4692 7.70465 15.5677 7.94435 15.5762 8.21829C15.5848 8.49223 15.4863 8.73194 15.2809 8.93739L8.5008 15.7175C8.39807 15.8202 8.28678 15.893 8.16693 15.9358C8.04708 15.9786 7.91867 16 7.7817 16C7.64472 16 7.51631 15.9786 7.39646 15.9358C7.27661 15.893 7.16532 15.8202 7.06259 15.7175L0.282504 8.93739C0.0941679 8.74906 0 8.51364 0 8.23113C0 7.94863 0.0941679 7.70465 0.282504 7.49919C0.487961 7.29373 0.731942 7.19101 1.01445 7.19101C1.29695 7.19101 1.54093 7.29373 1.74639 7.49919L6.75441 12.5072Z" fill="currentColor"/>
+                            </g>
+                        </svg>
+                        </div>
+                    </div>
+                    <div class="home-overview-stat-content" id="stat-content-2">
+                        <div class="home-overview-stat-expanded-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.                        </div>
+                                                    <a href="https://example.com" class="home-overview-stat-read-more">
+                                Read more
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12h14m0 0l-7-7m7 7l-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                                            </div>
+                </div>
+                                    </div>
+    </div>
+</section>
+
+
+
+
+<section  
+         class="healthcare-programs-block"
+         role="region"
+         aria-label="Healthcare programs section">
+
+        <!-- Story Card Section -->
+<div class="story-card-section">
+    <div class="story-card-wrapper">
+        <div class="story-card-container">
+            <div class="story-card-content">
+                <div class="story-card-text-group">
+                                            <h2 class="story-card-heading">NURSING NEEDS YOU.</h2>
+                                                                <p class="story-card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                    </div>
+                                    <a href="#" class="story-card-link">
+                        Watch the story                    </a>
+                            </div>
+            <div class="story-card-background" style="background-image: url('http://localhost/unitek-rebuild/wp-content/uploads/2025/09/ganesh-chaturthi-wishes-2025.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <!-- Hero Section -->
+        <div class="healthcare-hero">
+        <div class="healthcare-hero-content">
+            
+            
+            <div class="healthcare-hero-text">
+                                    <h1>Healthcare programs focused on your future.</h1>
+                            </div>
+            
+                        <div class="healthcare-tabs">
+                            <div class="healthcare-all-programs">
+                    <a href="https://www.google.com/">All programs</a>
+                </div>
+                                                                                            <div class="healthcare-tab active" 
+                             data-tab-index="0">
+                            BSN Nursing Program                        </div>
+                                                                                                    <div class="healthcare-tab " 
+                             data-tab-index="1">
+                            Practical Nursing                        </div>
+                                                                                                    <div class="healthcare-tab " 
+                             data-tab-index="2">
+                            Vocational Nursing                        </div>
+                                                </div>
+                    </div>
+    </div>
+        
+    <!-- Program Details Section -->
+        <div class="healthcare-program-details">
+        <div class="healthcare-program-content">
+            <!-- Left Column - Program Headline -->
+            <div class="healthcare-program-headline" >
+                <h2 class="tab-program-headline">EARN YOUR BSN DEGREE IN AS FEW AS 1 YEARS.</h2>
+            </div>
+            
+            <!-- Middle Column - Program Description + Link -->
+            <div class="healthcare-program-description-wrapper">
+                <div class="healthcare-program-description">
+                    <p class="tab-program-description" >Starting day one, dedicated faculty are by your side through every challenge and milestone — supporting, guiding, and preparing you for a career that rewards compassion.</p>
+                </div>
+                <a href="https://www.google.com/" class="healthcare-learn-more" >Learn more</a>
+            </div>
+            
+            <!-- Right Column - NCLEX Stats -->
+            <div class="healthcare-stats">
+                <div class="healthcare-stats-label tab-nclex-label" >2024 NCLEX Pass Rate</div>
+                <div class="healthcare-stats-rate tab-nclex-rate" >94.31%</div>
+                <div class="healthcare-stats-source tab-nclex-source" >Source: NCLEX-RN First Time Pass Rates 2024</div>
+                <div class="healthcare-stats-outcomes" style="display:none;">
+                    <a href="">View all Program Outcomes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- Testimonial Section -->
+                <div class="healthcare-testimonial">
+        <div class="healthcare-testimonial-content">
+            <div class="healthcare-testimonial-card" style="background-image: url('http://localhost/unitek-rebuild/wp-content/uploads/2025/09/ganesh-chaturthi-wishes-2025.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                <div class="healthcare-testimonial-content-wrapper">
+                    <div class="healthcare-testimonial-quote" >&#8220;</div>
+                    <div class="healthcare-testimonial-content-inner">
+                        <p class="healthcare-testimonial-text tab-testimonial-text" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="healthcare-testimonial-author" >
+                            <div class="healthcare-testimonial-name tab-testimonial-name" >Name A.</div>
+                            <div class="healthcare-testimonial-title tab-testimonial-title" >Unitek Faculty</div>
+                        </div>
+                    </div>
+                    <div class="healthcare-testimonial-read-more" >
+                        <a href="https://www.google.com/">Read more</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="healthcare-video-placeholder" 
+                 data-is-uploaded="0"
+                  
+                 style="background-image: url('https://img.youtube.com/vi/aqz-KE-bpKQ/maxresdefault.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; ">
+                <button class="healthcare-video-play" 
+                        data-video-url="https://www.youtube.com/watch?v=aqz-KE-bpKQ"
+                        data-is-uploaded="0"
+                        aria-label="Play video"></button>
+            </div>
+        </div>
+    </div>
+        
+    <!-- Video Modal -->
+        <div class="healthcare-video-modal" id="healthcareVideoModal">
+        <div class="healthcare-video-modal-content">
+            <button class="healthcare-video-modal-close" aria-label="Close video"></button>
+            <div id="healthcareVideoContainer"></div>
+        </div>
+    </div>
+    </section>
+
+
+
+
+
+
+<section  
+         class="unitek-advantage-block"
+         role="region"
+         aria-label="Unitek advantage section">
+    
+    <div class="unitek-advantage-content">
+        <!-- Left Column - Content and Features -->
+        <div class="unitek-advantage-left">
+            <h2 class="unitek-advantage-heading">The Unitek advantage.</h2>
+            
+            <div class="unitek-advantage-subheading">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.            </div>
+            
+            <div class="unitek-advantage-body-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+            </div>
+            
+            <div class="unitek-advantage-features">
+                                    <div class="unitek-advantage-feature">
+                        <h3 class="unitek-advantage-feature-title">Real-World Experience.</h3>
+                        <p class="unitek-advantage-feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                                    <div class="unitek-advantage-feature">
+                        <h3 class="unitek-advantage-feature-title">Flexible Programs.</h3>
+                        <p class="unitek-advantage-feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                                    <div class="unitek-advantage-feature">
+                        <h3 class="unitek-advantage-feature-title">Career Support.</h3>
+                        <p class="unitek-advantage-feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                            </div>
+            
+                            <div class="unitek-advantage-cta">
+                    <a href="#" class="unitek-advantage-cta-button">
+                        Get started today                    </a>
+                </div>
+                    </div>
+        
+        <!-- Right Column - Testimonial Carousel -->
+        <div class="unitek-advantage-right">
+            <div class="unitek-advantage-testimonial">
+                <div class="unitek-advantage-testimonial-carousel">
+                                            <div class="unitek-advantage-testimonial-slide active">
+                            <div class="unitek-advantage-testimonial-quote">&#8220;</div>
+                            <p class="unitek-advantage-testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            <div class="unitek-advantage-testimonial-author">
+                                <div class="unitek-advantage-testimonial-name">Name A.</div>
+                                <div class="unitek-advantage-testimonial-title">Unitek Graduate</div>
+                            </div>
+                        </div>
+                                            <div class="unitek-advantage-testimonial-slide ">
+                            <div class="unitek-advantage-testimonial-quote">&#8220;</div>
+                            <p class="unitek-advantage-testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="unitek-advantage-testimonial-author">
+                                <div class="unitek-advantage-testimonial-name">Name B.</div>
+                                <div class="unitek-advantage-testimonial-title">Unitek Graduate</div>
+                            </div>
+                        </div>
+                                            <div class="unitek-advantage-testimonial-slide ">
+                            <div class="unitek-advantage-testimonial-quote">&#8220;</div>
+                            <p class="unitek-advantage-testimonial-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <div class="unitek-advantage-testimonial-author">
+                                <div class="unitek-advantage-testimonial-name">Name C.</div>
+                                <div class="unitek-advantage-testimonial-title">Unitek Graduate</div>
+                            </div>
+                        </div>
+                                    </div>
+                
+                <!-- Pagination Dots -->
+                <div class="unitek-advantage-testimonial-pagination">
+                                            <div class="unitek-advantage-testimonial-dot active" data-slide="0"></div>
+                                            <div class="unitek-advantage-testimonial-dot " data-slide="1"></div>
+                                            <div class="unitek-advantage-testimonial-dot " data-slide="2"></div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section  
+         class="career-block"
+         role="region"
+         aria-label="Career services section">
+    <div class="career-container">
+        <!-- Left Column - Text Content -->
+        <div class="career-text-column">
+            <div class="career-content">
+                                    <h1 class="career-headline">The support you need to navigate the costs of your education and launch your career.</h1>
+                                                    <p class="career-subheadline">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+        </div>
+        
+        <!-- Right Column - Career Cards -->
+        <div class="career-cards-column">
+            <div class="career-cards-container">
+                                                                                                            <div class="career-card">
+                                <span class="career-card-title">Apply for Transcript Evaluations</span>
+                                <span class="career-card-arrow">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </div>
+                                                                                                                                                        <div class="career-card">
+                                <span class="career-card-title">Career Services</span>
+                                <span class="career-card-arrow">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </div>
+                                                                                                                                                        <div class="career-card">
+                                <span class="career-card-title">Financial Aid</span>
+                                <span class="career-card-arrow">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </div>
+                                                                                                                                                        <div class="career-card">
+                                <span class="career-card-title">College Catalog</span>
+                                <span class="career-card-arrow">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </div>
+                                                                        </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section  
+         class="accreditations-approvals-block"
+         role="region"
+         aria-label="Accreditations and approvals section">
+    
+    <div class="accreditations-approvals-content">
+        <!-- Left Column - Title and Description -->
+        <div class="accreditations-approvals-left">
+                            <h2 class="accreditations-approvals-title">Accreditations &amp; Approvals</h2>
+                                        <div class="accreditations-approvals-description">
+                    Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.                </div>
+                    </div>
+        
+        <!-- Right Column - Accreditation Items -->
+        <div class="accreditations-approvals-right">
+                            <div class="accreditations-approvals-view-all">
+                    <a href="https://example.com">View all</a>
+                </div>
+                        
+            <div class="accreditations-approvals-items">
+                                    <div class="accreditations-approvals-item">
+                                                    <div class="accreditations-approvals-item-logo">
+                                <img decoding="async" src="http://localhost/unitek-rebuild/wp-content/uploads/2025/09/2d2af598f54ec09ef2dd691d258de1d84e078f1d.png" 
+                                     alt="">
+                            </div>
+                                                
+                                                
+                                                    <p class="accreditations-approvals-item-description">
+                                Accredited by Accrediting Commission of Career Schools and Colleges (ACCSC)                            </p>
+                                            </div>
+                                    <div class="accreditations-approvals-item">
+                                                    <div class="accreditations-approvals-item-logo">
+                                <img decoding="async" src="http://localhost/unitek-rebuild/wp-content/uploads/2025/09/logo-ccne-2.png" 
+                                     alt="">
+                            </div>
+                                                
+                                                
+                                                    <p class="accreditations-approvals-item-description">
+                                Commission on Collegiate Nursing Education (CCNE)                            </p>
+                                            </div>
+                                    <div class="accreditations-approvals-item">
+                                                    <div class="accreditations-approvals-item-logo">
+                                <img decoding="async" src="http://localhost/unitek-rebuild/wp-content/uploads/2025/09/Bureau_for_Private_Postsecondary_Education_logo-705x705-1.png" 
+                                     alt="">
+                            </div>
+                                                
+                                                
+                                                    <p class="accreditations-approvals-item-description">
+                                Bureau for Private Postsecondary Education (BPPE) – Department of Consumer Affairs                            </p>
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section  
+         class="faq-section-block"
+         role="region"
+         aria-label="FAQ section">
+    
+    <div class="faq-section-content">
+        <!-- Left Sidebar - Categories -->
+        <div class="faq-section-sidebar">
+                            <h2 class="faq-section-title">frequently asked questions at Unitek.</h2>
+                        
+            <div class="faq-section-categories">
+                                                                                                                <button class="faq-category-tab" 
+                                    data-category-index="0"
+                                    aria-expanded="false">
+                                Tuition and Financial Aid                            </button>
+                            <!-- Mobile: Inline FAQ items within category -->
+                            <div class="faq-mobile-accordion" 
+                                 data-mobile-category="0">
+                                                                                                            <div class="faq-mobile-accordion-item">
+                                            <button class="faq-mobile-question" 
+                                                    aria-expanded="false"
+                                                    aria-controls="faq-mobile-answer-0-0">
+                                                Does Unitek lorem ipsum dolor sit amet?                                            </button>
+                                            <div class="faq-mobile-answer" 
+                                                 id="faq-mobile-answer-0-0">
+                                                <div class="faq-mobile-answer-content">
+                                                    <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                            <div class="faq-mobile-accordion-item">
+                                            <button class="faq-mobile-question" 
+                                                    aria-expanded="false"
+                                                    aria-controls="faq-mobile-answer-0-1">
+                                                Are there lorem ipsum dolor sit amet?                                            </button>
+                                            <div class="faq-mobile-answer" 
+                                                 id="faq-mobile-answer-0-1">
+                                                <div class="faq-mobile-answer-content">
+                                                    <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                            <div class="faq-mobile-accordion-item">
+                                            <button class="faq-mobile-question" 
+                                                    aria-expanded="false"
+                                                    aria-controls="faq-mobile-answer-0-2">
+                                                How does lorem ipsum dolor sit amet?                                            </button>
+                                            <div class="faq-mobile-answer" 
+                                                 id="faq-mobile-answer-0-2">
+                                                <div class="faq-mobile-answer-content">
+                                                    <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                </div>
+                                                                                                                        <button class="faq-category-tab" 
+                                    data-category-index="1"
+                                    aria-expanded="false">
+                                Transfer Credits                            </button>
+                            <!-- Mobile: Inline FAQ items within category -->
+                            <div class="faq-mobile-accordion" 
+                                 data-mobile-category="1">
+                                                                                                            <div class="faq-mobile-accordion-item">
+                                            <button class="faq-mobile-question" 
+                                                    aria-expanded="false"
+                                                    aria-controls="faq-mobile-answer-1-0">
+                                                1 Does Unitek lorem ipsum dolor sit amet?                                            </button>
+                                            <div class="faq-mobile-answer" 
+                                                 id="faq-mobile-answer-1-0">
+                                                <div class="faq-mobile-answer-content">
+                                                    <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                            <div class="faq-mobile-accordion-item">
+                                            <button class="faq-mobile-question" 
+                                                    aria-expanded="false"
+                                                    aria-controls="faq-mobile-answer-1-1">
+                                                2 Are there lorem ipsum dolor sit amet?                                            </button>
+                                            <div class="faq-mobile-answer" 
+                                                 id="faq-mobile-answer-1-1">
+                                                <div class="faq-mobile-answer-content">
+                                                    <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                            <div class="faq-mobile-accordion-item">
+                                            <button class="faq-mobile-question" 
+                                                    aria-expanded="false"
+                                                    aria-controls="faq-mobile-answer-1-2">
+                                                3 How does lorem ipsum dolor sit amet?                                            </button>
+                                            <div class="faq-mobile-answer" 
+                                                 id="faq-mobile-answer-1-2">
+                                                <div class="faq-mobile-answer-content">
+                                                    <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                </div>
+                                                                                                                        <button class="faq-category-tab" 
+                                    data-category-index="2"
+                                    aria-expanded="false">
+                                Admissions &amp; Enrollment                            </button>
+                            <!-- Mobile: Inline FAQ items within category -->
+                            <div class="faq-mobile-accordion" 
+                                 data-mobile-category="2">
+                                                                                                            <div class="faq-mobile-accordion-item">
+                                            <button class="faq-mobile-question" 
+                                                    aria-expanded="false"
+                                                    aria-controls="faq-mobile-answer-2-0">
+                                                2 Does Unitek lorem ipsum dolor sit amet?                                            </button>
+                                            <div class="faq-mobile-answer" 
+                                                 id="faq-mobile-answer-2-0">
+                                                <div class="faq-mobile-answer-content">
+                                                    <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                            <div class="faq-mobile-accordion-item">
+                                            <button class="faq-mobile-question" 
+                                                    aria-expanded="false"
+                                                    aria-controls="faq-mobile-answer-2-1">
+                                                2 Are there lorem ipsum dolor sit amet?                                            </button>
+                                            <div class="faq-mobile-answer" 
+                                                 id="faq-mobile-answer-2-1">
+                                                <div class="faq-mobile-answer-content">
+                                                    <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                            <div class="faq-mobile-accordion-item">
+                                            <button class="faq-mobile-question" 
+                                                    aria-expanded="false"
+                                                    aria-controls="faq-mobile-answer-2-2">
+                                                2 How does lorem ipsum dolor sit amet?                                            </button>
+                                            <div class="faq-mobile-answer" 
+                                                 id="faq-mobile-answer-2-2">
+                                                <div class="faq-mobile-answer-content">
+                                                    <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                </div>
+                                                                                                                        <button class="faq-category-tab" 
+                                    data-category-index="3"
+                                    aria-expanded="false">
+                                fhnhggnhn                            </button>
+                            <!-- Mobile: Inline FAQ items within category -->
+                            <div class="faq-mobile-accordion" 
+                                 data-mobile-category="3">
+                                                                                                            <div class="faq-mobile-accordion-item">
+                                            <button class="faq-mobile-question" 
+                                                    aria-expanded="false"
+                                                    aria-controls="faq-mobile-answer-3-0">
+                                                gfbnfgnfn                                            </button>
+                                            <div class="faq-mobile-answer" 
+                                                 id="faq-mobile-answer-3-0">
+                                                <div class="faq-mobile-answer-content">
+                                                    <p>fgbgdff</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                            <div class="faq-mobile-accordion-item">
+                                            <button class="faq-mobile-question" 
+                                                    aria-expanded="false"
+                                                    aria-controls="faq-mobile-answer-3-1">
+                                                3 Are there lorem ipsum dolor sit amet?                                            </button>
+                                            <div class="faq-mobile-answer" 
+                                                 id="faq-mobile-answer-3-1">
+                                                <div class="faq-mobile-answer-content">
+                                                    <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                            <div class="faq-mobile-accordion-item">
+                                            <button class="faq-mobile-question" 
+                                                    aria-expanded="false"
+                                                    aria-controls="faq-mobile-answer-3-2">
+                                                3 How does lorem ipsum dolor sit amet?                                            </button>
+                                            <div class="faq-mobile-answer" 
+                                                 id="faq-mobile-answer-3-2">
+                                                <div class="faq-mobile-answer-content">
+                                                    <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                                                                                </div>
+                                                                        </div>
+        </div>
+        
+        <!-- Right Section - FAQ Accordion -->
+        <div class="faq-section-main">
+                            <div class="faq-accordion-category" 
+                     data-category="0">
+                    <div class="faq-accordion">
+                                                                                    <div class="faq-accordion-item">
+                                    <button class="faq-accordion-question" 
+                                            aria-expanded="false"
+                                            aria-controls="faq-answer-0-0">
+                                        Does Unitek lorem ipsum dolor sit amet?                                    </button>
+                                    <div class="faq-accordion-answer" 
+                                         id="faq-answer-0-0">
+                                        <div class="faq-accordion-answer-content">
+                                            <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="faq-accordion-item">
+                                    <button class="faq-accordion-question" 
+                                            aria-expanded="false"
+                                            aria-controls="faq-answer-0-1">
+                                        Are there lorem ipsum dolor sit amet?                                    </button>
+                                    <div class="faq-accordion-answer" 
+                                         id="faq-answer-0-1">
+                                        <div class="faq-accordion-answer-content">
+                                            <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="faq-accordion-item">
+                                    <button class="faq-accordion-question" 
+                                            aria-expanded="false"
+                                            aria-controls="faq-answer-0-2">
+                                        How does lorem ipsum dolor sit amet?                                    </button>
+                                    <div class="faq-accordion-answer" 
+                                         id="faq-answer-0-2">
+                                        <div class="faq-accordion-answer-content">
+                                            <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                        </div>
+                </div>
+                            <div class="faq-accordion-category" 
+                     data-category="1">
+                    <div class="faq-accordion">
+                                                                                    <div class="faq-accordion-item">
+                                    <button class="faq-accordion-question" 
+                                            aria-expanded="false"
+                                            aria-controls="faq-answer-1-0">
+                                        1 Does Unitek lorem ipsum dolor sit amet?                                    </button>
+                                    <div class="faq-accordion-answer" 
+                                         id="faq-answer-1-0">
+                                        <div class="faq-accordion-answer-content">
+                                            <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="faq-accordion-item">
+                                    <button class="faq-accordion-question" 
+                                            aria-expanded="false"
+                                            aria-controls="faq-answer-1-1">
+                                        2 Are there lorem ipsum dolor sit amet?                                    </button>
+                                    <div class="faq-accordion-answer" 
+                                         id="faq-answer-1-1">
+                                        <div class="faq-accordion-answer-content">
+                                            <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="faq-accordion-item">
+                                    <button class="faq-accordion-question" 
+                                            aria-expanded="false"
+                                            aria-controls="faq-answer-1-2">
+                                        3 How does lorem ipsum dolor sit amet?                                    </button>
+                                    <div class="faq-accordion-answer" 
+                                         id="faq-answer-1-2">
+                                        <div class="faq-accordion-answer-content">
+                                            <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                        </div>
+                </div>
+                            <div class="faq-accordion-category" 
+                     data-category="2">
+                    <div class="faq-accordion">
+                                                                                    <div class="faq-accordion-item">
+                                    <button class="faq-accordion-question" 
+                                            aria-expanded="false"
+                                            aria-controls="faq-answer-2-0">
+                                        2 Does Unitek lorem ipsum dolor sit amet?                                    </button>
+                                    <div class="faq-accordion-answer" 
+                                         id="faq-answer-2-0">
+                                        <div class="faq-accordion-answer-content">
+                                            <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="faq-accordion-item">
+                                    <button class="faq-accordion-question" 
+                                            aria-expanded="false"
+                                            aria-controls="faq-answer-2-1">
+                                        2 Are there lorem ipsum dolor sit amet?                                    </button>
+                                    <div class="faq-accordion-answer" 
+                                         id="faq-answer-2-1">
+                                        <div class="faq-accordion-answer-content">
+                                            <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="faq-accordion-item">
+                                    <button class="faq-accordion-question" 
+                                            aria-expanded="false"
+                                            aria-controls="faq-answer-2-2">
+                                        2 How does lorem ipsum dolor sit amet?                                    </button>
+                                    <div class="faq-accordion-answer" 
+                                         id="faq-answer-2-2">
+                                        <div class="faq-accordion-answer-content">
+                                            <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                        </div>
+                </div>
+                            <div class="faq-accordion-category" 
+                     data-category="3">
+                    <div class="faq-accordion">
+                                                                                    <div class="faq-accordion-item">
+                                    <button class="faq-accordion-question" 
+                                            aria-expanded="false"
+                                            aria-controls="faq-answer-3-0">
+                                        gfbnfgnfn                                    </button>
+                                    <div class="faq-accordion-answer" 
+                                         id="faq-answer-3-0">
+                                        <div class="faq-accordion-answer-content">
+                                            <p>fgbgdff</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="faq-accordion-item">
+                                    <button class="faq-accordion-question" 
+                                            aria-expanded="false"
+                                            aria-controls="faq-answer-3-1">
+                                        3 Are there lorem ipsum dolor sit amet?                                    </button>
+                                    <div class="faq-accordion-answer" 
+                                         id="faq-answer-3-1">
+                                        <div class="faq-accordion-answer-content">
+                                            <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="faq-accordion-item">
+                                    <button class="faq-accordion-question" 
+                                            aria-expanded="false"
+                                            aria-controls="faq-answer-3-2">
+                                        3 How does lorem ipsum dolor sit amet?                                    </button>
+                                    <div class="faq-accordion-answer" 
+                                         id="faq-answer-3-2">
+                                        <div class="faq-accordion-answer-content">
+                                            <p>Unitek College is an accredited private institution that combines unique academic and technical specialties to provide educational programs in healthcare and nursing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                        </div>
+                </div>
+                    </div>
+    </div>
+</section>
+
+
+
+<section class="get-started-today-block" id="get-started-today">
+    <div class="get-started-today-content">
+        <!-- Left Column - Form -->
+        <div class="get-started-today-form">
+                            <h2 class="get-started-today-heading">Get started today! jghj</h2>
+                                        <p class="get-started-today-description">Complete this form and our Admissions department will contact you shortly with more information.nhgjkhg</p>
+                        
+                            <!-- Display Contact Form 7 -->
+                
+<div class="wpcf7 no-js" id="wpcf7-f289-o1" lang="en-US" dir="ltr" data-wpcf7-id="289">
+<div class="screen-reader-response"> <ul></ul></div>
+<form action="/unitek-rebuild/wp-json/wp/v2/pages?slug=home&#038;per_page=1&#038;_embed=1#wpcf7-f289-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="289" /><input type="hidden" name="_wpcf7_version" value="6.1.3" /><input type="hidden" name="_wpcf7_locale" value="en_US" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f289-o1" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<div class="get-started-today-form-fields">
+                <!-- Row 1: Firstname, Lastname -->
+                <div class="get-started-today-form-row">
+                    <div class="get-started-today-form-field">
+                        <label for="firstname" class="sr-only">First Name</label>
+                        <span class="wpcf7-form-control-wrap" data-name="firstname"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Firstname" value="" type="text" name="firstname" /></span>
+                    </div>
+                    <div class="get-started-today-form-field">
+                        <label for="lastname" class="sr-only">Last Name</label>
+                        <span class="wpcf7-form-control-wrap" data-name="lastname"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Lastname" value="" type="text" name="lastname" /></span>                    </div>
+                </div>                <!-- Row 2: Email, Phone -->
+                <div class="get-started-today-form-row">
+                    <div class="get-started-today-form-field">
+                        <label for="email" class="sr-only">Email</label>
+                        <span class="wpcf7-form-control-wrap" data-name="email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="email" /></span>                    </div>
+                    <div class="get-started-today-form-field">
+                        <label for="phone" class="sr-only">Phone</label>
+                        <span class="wpcf7-form-control-wrap" data-name="phone"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Phone" value="" type="tel" name="phone" /></span>                    </div>
+                </div>                <!-- Row 3: State, Zipcode -->
+                <div class="get-started-today-form-row">
+                    <div class="get-started-today-form-field">
+                        <label for="state" class="sr-only">State</label>
+                        <span class="wpcf7-form-control-wrap" data-name="state"><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="state"><option value="State">State</option><option value="California">California</option><option value="Texas">Texas</option><option value="Florida">Florida</option><option value="New York">New York</option><option value="Arizona">Arizona</option></select></span>
+                    </div>
+                    <div class="get-started-today-form-field">
+                        <label for="zipcode" class="sr-only">Zipcode</label>
+                        <input type="text" id="zipcode" name="zipcode" placeholder="Zipcode" required>
+                    </div>
+                </div>                <!-- Row 4: Campus, Program -->
+                <div class="get-started-today-form-row">
+                    <div class="get-started-today-form-field">
+                        <label for="campus" class="sr-only">Campus of Interest</label>
+                        <span class="wpcf7-form-control-wrap" data-name="campus"><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="campus"><option value="Campus">Campus</option><option value="Campus 1">Campus 1</option><option value="Campus 2">Campus 2</option><option value="Campus 3">Campus 3</option></select></span>
+                    </div>
+                    <div class="get-started-today-form-field">
+                        <label for="program" class="sr-only">Program of Interest</label>
+                        <span class="wpcf7-form-control-wrap" data-name="programOfInterest"><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required program-of-interest minimal" id="ms_programOfInterest" aria-required="true" aria-invalid="false" name="programOfInterest"><option value="PROGRAM OF INTEREST*">PROGRAM OF INTEREST*</option><option value="Bachelors of Science in Nursing">Bachelors of Science in Nursing</option><option value="Physical Therapist Assistant">Physical Therapist Assistant</option><option value="Practical Nursing">Practical Nursing</option></select></span>
+                    </div>
+                </div>
+                <div class="get-started-today-form-checkbox">
+               <span class="wpcf7-form-control-wrap" data-name="acceptance-518"><span class="wpcf7-form-control wpcf7-acceptance optional"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-518" value="1" aria-invalid="false" /><span class="wpcf7-list-item-label">By submitting contact information on this website, you are consenting to receive calls, SMS and emails from Unitek Learning Education Group Corp (ULEGC) and its affiliates. Your information will not be sold or shared with parties unrelated to ULEGC. You certify that you are the owner of the contact information provided and agree to our privacy policy. Please note, this consent is not required to attend our institutions.</span></label></span></span></span>
+                </div>                <button type="submit" class="get-started-today-submit">
+                    Get started today →
+                </button>
+            </div><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+                    </div>
+        
+        <!-- Right Column - Image -->
+        <div class="get-started-today-image">
+                            <img decoding="async" src="http://localhost/unitek-rebuild/wp-content/uploads/2025/09/ganesh-chaturthi-wishes-2025.png" alt="">
+                    </div>
+    </div>
+</section>
+
+
+
+<section  
+         class="get-started-dark-block"
+         role="region"
+         aria-label="Get started form">
+    
+    <div class="get-started-dark-container">
+        <div class="get-started-dark-content">
+            <!-- Form Section Wrapper -->
+            <div class="get-started-dark-form-wrapper">
+                <!-- Header Section -->
+                <div class="get-started-dark-header">
+                                            <h2 class="get-started-dark-heading">Get started today!</h2>
+                                                                <p class="get-started-dark-description">Complete this form and our Admissions department will contact you shortly with more information.</p>
+                                    </div>
+                
+                <!-- Divider -->
+                <div class="get-started-dark-divider"></div>
+                
+                <!-- Form Section -->
+                <form class="get-started-dark-form" action="https://www.google.com/" method="post">
+                <div class="get-started-dark-form-grid">
+                    <!-- Column 1 -->
+                    <div class="get-started-dark-form-column">
+                        <!-- Firstname -->
+                        <div class="get-started-dark-form-field">
+                            <label for="gsd-firstname" class="sr-only">First Name</label>
+                            <input type="text" id="gsd-firstname" name="firstname" placeholder="Firstname" required>
+                        </div>
+                        
+                        <!-- Lastname -->
+                        <div class="get-started-dark-form-field">
+                            <label for="gsd-lastname" class="sr-only">Last Name</label>
+                            <input type="text" id="gsd-lastname" name="lastname" placeholder="Lastname" required>
+                        </div>
+                        
+                        <!-- State -->
+                        <div class="get-started-dark-form-field">
+                            <label for="gsd-state" class="sr-only">State</label>
+                            <select id="gsd-state" name="state" required>
+                                <option value="" disabled selected>State</option>
+                                                                    <option value="AL">Alabama</option>
+                                                                    <option value="AK">Alaska</option>
+                                                                    <option value="AZ">Arizona</option>
+                                                                    <option value="AR">Arkansas</option>
+                                                                    <option value="CA">California</option>
+                                                                    <option value="CO">Colorado</option>
+                                                                    <option value="CT">Connecticut</option>
+                                                                    <option value="DE">Delaware</option>
+                                                                    <option value="FL">Florida</option>
+                                                                    <option value="GA">Georgia</option>
+                                                                    <option value="HI">Hawaii</option>
+                                                                    <option value="ID">Idaho</option>
+                                                                    <option value="IL">Illinois</option>
+                                                                    <option value="IN">Indiana</option>
+                                                                    <option value="IA">Iowa</option>
+                                                                    <option value="KS">Kansas</option>
+                                                                    <option value="KY">Kentucky</option>
+                                                                    <option value="LA">Louisiana</option>
+                                                                    <option value="ME">Maine</option>
+                                                                    <option value="MD">Maryland</option>
+                                                                    <option value="MA">Massachusetts</option>
+                                                                    <option value="MI">Michigan</option>
+                                                                    <option value="MN">Minnesota</option>
+                                                                    <option value="MS">Mississippi</option>
+                                                                    <option value="MO">Missouri</option>
+                                                                    <option value="MT">Montana</option>
+                                                                    <option value="NE">Nebraska</option>
+                                                                    <option value="NV">Nevada</option>
+                                                                    <option value="NH">New Hampshire</option>
+                                                                    <option value="NJ">New Jersey</option>
+                                                                    <option value="NM">New Mexico</option>
+                                                                    <option value="NY">New York</option>
+                                                                    <option value="NC">North Carolina</option>
+                                                                    <option value="ND">North Dakota</option>
+                                                                    <option value="OH">Ohio</option>
+                                                                    <option value="OK">Oklahoma</option>
+                                                                    <option value="OR">Oregon</option>
+                                                                    <option value="PA">Pennsylvania</option>
+                                                                    <option value="RI">Rhode Island</option>
+                                                                    <option value="SC">South Carolina</option>
+                                                                    <option value="SD">South Dakota</option>
+                                                                    <option value="TN">Tennessee</option>
+                                                                    <option value="TX">Texas</option>
+                                                                    <option value="UT">Utah</option>
+                                                                    <option value="VT">Vermont</option>
+                                                                    <option value="VA">Virginia</option>
+                                                                    <option value="WA">Washington</option>
+                                                                    <option value="WV">West Virginia</option>
+                                                                    <option value="WI">Wisconsin</option>
+                                                                    <option value="WY">Wyoming</option>
+                                                            </select>
+                            <svg class="get-started-dark-form-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.83 16.67L20 23.82L27.17 16.67" stroke="#141A1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Zipcode -->
+                        <div class="get-started-dark-form-field">
+                            <label for="gsd-zipcode" class="sr-only">Zipcode</label>
+                            <input type="text" id="gsd-zipcode" name="zipcode" placeholder="Zipcode" pattern="[0-9]{5}" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Column 2 -->
+                    <div class="get-started-dark-form-column">
+                        <!-- Email -->
+                        <div class="get-started-dark-form-field">
+                            <label for="gsd-email" class="sr-only">Email</label>
+                            <input type="email" id="gsd-email" name="email" placeholder="Email" required>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="get-started-dark-form-field">
+                            <label for="gsd-phone" class="sr-only">Phone</label>
+                            <input type="tel" id="gsd-phone" name="phone" placeholder="Phone" pattern="[0-9]{10}" required>
+                        </div>
+                        
+                        <!-- Campus of interest -->
+                        <div class="get-started-dark-form-field">
+                            <label for="gsd-campus" class="sr-only">Campus of Interest</label>
+                            <select id="gsd-campus" name="campus" required>
+                                <option value="" disabled selected>Campus of interest</option>
+                                                                    <option value="fremont">Fremont Campus</option>
+                                                                    <option value="hayward">Hayward Campus</option>
+                                                                    <option value="sacramento">Sacramento Campus</option>
+                                                                    <option value="san-jose">San Jose Campus</option>
+                                                                    <option value="stockton">Stockton Campus</option>
+                                                                    <option value="online">Online Programs</option>
+                                                            </select>
+                            <svg class="get-started-dark-form-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.83 16.67L20 23.82L27.17 16.67" stroke="#141A1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Program of interest -->
+                        <div class="get-started-dark-form-field">
+                            <label for="gsd-program" class="sr-only">Program of Interest</label>
+                            <select id="gsd-program" name="program" required>
+                                <option value="" disabled selected>Program of interest</option>
+                                                                    <option value="nursing">Nursing Programs</option>
+                                                                    <option value="healthcare">Healthcare Programs</option>
+                                                                    <option value="business">Business Programs</option>
+                                                                    <option value="technology">Technology Programs</option>
+                                                                    <option value="education">Education Programs</option>
+                                                            </select>
+                            <svg class="get-started-dark-form-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.83 16.67L20 23.82L27.17 16.67" stroke="#141A1E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Consent Checkbox -->
+                <div class="get-started-dark-consent">
+                    <input type="checkbox" id="gsd-consent" name="consent" required>
+                    <label for="gsd-consent">
+                                                    <p>By submitting contact information on this website, you are consenting to receive calls, SMS and emails from Unitek Learning Education Group Corp (ULEGC) and its affiliates. Your information will not be sold or shared with parties unrelated to ULEGC. You certify that you are the owner of the contact information provided and agree to our privacy policy. Please note, this consent is not required to attend our institutions.</p>
+                                            </label>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="get-started-dark-submit">
+                    Get started today                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <section class="news">
+        <div class="container">
+            <h2 class="news-headline">Latest News</h2>
+            <div class="news-grid">
+                                    <article class="news-card">
+                        <div class="news-image">
+                                                            <div class="image-placeholder">[ Image ]</div>
+                                                                                    <div class="category-tag">Uncategorized</div>
+                        </div>
+                        <div class="news-content">
+                                                            <time class="news-date" datetime="2025-11-09T20:25:34+00:00">
+                                    November 9, 2025                                </time>
+                                                        <h3 class="news-title">
+                                <a href="http://localhost/unitek-rebuild/what-is-model-context-protocol-connect-ai-to-your-world/" rel="bookmark">
+                                    What is Model Context Protocol? Connect AI to your world                                </a>
+                            </h3>
+                                                            <p class="news-snippet"></p>
+                                                        <a href="http://localhost/unitek-rebuild/what-is-model-context-protocol-connect-ai-to-your-world/" class="read-more-link">Read more →</a>
+                        </div>
+                    </article>
+                                    <article class="news-card">
+                        <div class="news-image">
+                                                                                            <a href="http://localhost/unitek-rebuild/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-2/" class="news-image-link" aria-label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor">
+                                    <img decoding="async" src="http://localhost/unitek-rebuild/wp-content/uploads/2025/09/ganesh-chaturthi-wishes-2025.png" alt="" class="wp-post-image">
+                                </a>
+                                                                                    <div class="category-tag">Uncategorized</div>
+                        </div>
+                        <div class="news-content">
+                                                            <time class="news-date" datetime="2025-09-27T05:28:08+00:00">
+                                    September 27, 2025                                </time>
+                                                        <h3 class="news-title">
+                                <a href="http://localhost/unitek-rebuild/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-2/" rel="bookmark">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor                                </a>
+                            </h3>
+                                                            <p class="news-snippet"></p>
+                                                        <a href="http://localhost/unitek-rebuild/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-2/" class="read-more-link">Read more →</a>
+                        </div>
+                    </article>
+                                    <article class="news-card">
+                        <div class="news-image">
+                                                                                            <a href="http://localhost/unitek-rebuild/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor/" class="news-image-link" aria-label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…">
+                                    <img decoding="async" src="http://localhost/unitek-rebuild/wp-content/uploads/2025/09/AdobeStock_612745191_Preview.jpeg" alt="" class="wp-post-image">
+                                </a>
+                                                                                    <div class="category-tag">Uncategorized</div>
+                        </div>
+                        <div class="news-content">
+                                                            <time class="news-date" datetime="2025-09-27T05:27:45+00:00">
+                                    September 27, 2025                                </time>
+                                                        <h3 class="news-title">
+                                <a href="http://localhost/unitek-rebuild/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor/" rel="bookmark">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…                                </a>
+                            </h3>
+                                                            <p class="news-snippet"></p>
+                                                        <a href="http://localhost/unitek-rebuild/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor/" class="read-more-link">Read more →</a>
+                        </div>
+                    </article>
+                            </div>
+        </div>
+    </section>
+    
+0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"mx-auto w-full","children":["$","div",null,{"className":"wp-content prose prose-zinc max-w-none dark:prose-invert","dangerouslySetInnerHTML":{"__html":"$2"}}]}],null,"$L3"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"L1cBnoRrNDNVOVo9wHs7V"}
+3:["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]
+6:null
