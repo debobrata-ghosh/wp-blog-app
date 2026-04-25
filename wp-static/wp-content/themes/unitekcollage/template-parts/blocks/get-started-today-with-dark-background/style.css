@@ -1,0 +1,361 @@
+/**
+ * Get Started Today (Dark Background) Block Styles
+ * Based on Figma Design
+ */
+
+/* Main Block Container */
+.get-started-dark-block {
+    width: 100%;
+    background-color: #28323C; /* Base UI-Four from Figma */
+    padding: 120px 0;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Full Width Alignment */
+.get-started-dark-block.alignfull {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.get-started-dark-container {
+    max-width: 1728px;
+    margin: 0 auto;
+    padding: 0 150px;
+}
+
+.get-started-dark-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Form Section */
+.get-started-dark-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+/* Header Section */
+.get-started-dark-header {
+    max-width: 100%; /* Full width within left column */
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Gap from Figma */
+}
+
+.get-started-dark-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px; /* 32px from image */
+    font-weight: 600; /* SemiBold from image */
+    line-height: 1.25em;
+    color: #9FE870; /* Bright green from image */
+    margin: 0;
+    padding: 0;
+}
+
+.get-started-dark-description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px; /* 18px from image */
+    font-weight: 400; /* Regular from image */
+    line-height: 1.5em;
+    color: #E0E0E0; /* Light gray from image */
+    margin: 0;
+    padding: 0;
+}
+
+/* Divider */
+.get-started-dark-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #68747C; /* Base UI-Three from Figma */
+}
+
+/* Form Section */
+.get-started-dark-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.get-started-dark-form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+    gap: 24px;
+}
+
+.get-started-dark-form-column {
+    display: contents; /* Make children direct grid items */
+}
+
+/* Form Fields */
+.get-started-dark-form-field {
+    position: relative;
+    width: 100%;
+}
+
+.get-started-dark-form-field input,
+.get-started-dark-form-field select {
+    width: 100%;
+    height: 56px; /* 56px from image */
+    padding: 16px; /* 16px from image */
+    background-color: #FFFFFF; /* White from image */
+    border: 1px solid rgba(172, 180, 188, 0.3); /* Very subtle light gray border from image */
+    border-radius: 8px; /* 8px from image */
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px; /* 18px from image */
+    font-weight: 300;
+    line-height: 1.4444em;
+    color: #28323C; /* Dark gray text from image */
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.get-started-dark-form-field input:focus,
+.get-started-dark-form-field select:focus {
+    outline: none;
+    border-color: #9FE870; /* Green focus state from image */
+}
+
+.get-started-dark-form-field input::placeholder {
+    color: #A0A0A0; /* Placeholder color from image */
+    opacity: 1;
+}
+
+/* Select Field Styling */
+.get-started-dark-form-field select {
+    appearance: none;
+    cursor: pointer;
+    padding-right: 48px; /* Space for custom arrow */
+}
+
+.get-started-dark-form-field select option {
+    font-weight: 300;
+    color: #28323C;
+}
+
+/* Custom Dropdown Arrow */
+.get-started-dark-form-icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 40px;
+    height: 40px;
+}
+
+/* Consent Checkbox */
+.get-started-dark-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px; /* Gap from Figma */
+    max-width: 664px; /* Width from Figma */
+}
+
+.get-started-dark-consent input[type="checkbox"] {
+    width: 24px; /* Size from Figma */
+    height: 24px;
+    min-width: 24px;
+    flex-shrink: 0;
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+.get-started-dark-consent label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px; /* Body Light 12 from Figma */
+    font-weight: 300; /* Light from Figma */
+    line-height: 1.3333em; /* 1.3333em from Figma */
+    color: #DADEE0; /* Base UI-Two from Figma */
+    cursor: pointer;
+}
+
+.get-started-dark-consent label p {
+    margin: 0;
+}
+
+/* Submit Button */
+.get-started-dark-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 24px; /* Padding from image */
+    background-color: #9FE870; /* Bright green from image */
+    border: none;
+    border-radius: 8px; /* 8px from image */
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px; /* 18px from image */
+    font-weight: 600; /* SemiBold from image */
+    line-height: 1.4444em;
+    color: #28323C; /* Dark charcoal from image */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: none;
+    width: 300px; /* Full width of form column from image */
+}
+
+.get-started-dark-submit:hover {
+    background-color: #8DD760; /* Slightly darker green on hover */
+    transform: translateY(-1px);
+    box-shadow: 0px 4px 8px 0px rgba(40, 50, 60, 0.16);
+}
+
+.get-started-dark-submit:active {
+    transform: translateY(0);
+}
+
+.get-started-dark-submit svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ===================================
+   RESPONSIVE STYLES
+   =================================== */
+
+/* 1280px and below */
+@media (max-width: 1280px) {
+    .get-started-dark-container {
+        padding: 0 40px;
+    }
+}
+
+/* Tablet (1024px and below) */
+@media (max-width: 1024px) {
+    .get-started-dark-block {
+        padding: 80px 0;
+    }
+    
+    .get-started-dark-container {
+        padding: 0 40px;
+    }
+    
+    .get-started-dark-form-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    }
+    
+    .get-started-dark-consent {
+        max-width: 100%;
+    }
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+    .get-started-dark-block {
+        padding: 60px 0;
+    }
+    
+    .get-started-dark-container {
+        padding: 0 24px;
+    }
+    
+    .get-started-dark-content {
+        gap: 24px;
+    }
+    
+    .get-started-dark-header {
+        max-width: 100%;
+        gap: 16px;
+    }
+    
+    .get-started-dark-heading {
+        font-size: 28px;
+    }
+    
+    .get-started-dark-description {
+        font-size: 14px;
+    }
+    
+    .get-started-dark-form {
+        gap: 24px;
+    }
+    
+    .get-started-dark-form-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 16px;
+    }
+    
+    .get-started-dark-form-field input,
+    .get-started-dark-form-field select {
+        height: 48px;
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .get-started-dark-submit {
+        width: 100%;
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .get-started-dark-block {
+        padding: 40px 0;
+    }
+    
+    .get-started-dark-container {
+        padding: 0 20px;
+    }
+    
+    .get-started-dark-content {
+        gap: 20px;
+    }
+    
+    .get-started-dark-header {
+        gap: 12px;
+    }
+    
+    .get-started-dark-heading {
+        font-size: 24px;
+    }
+    
+    .get-started-dark-description {
+        font-size: 13px;
+    }
+    
+    .get-started-dark-form {
+        gap: 20px;
+    }
+    
+    .get-started-dark-form-grid {
+        gap: 12px;
+    }
+    
+    .get-started-dark-form-column {
+        gap: 12px;
+    }
+    
+    .get-started-dark-form-field input,
+    .get-started-dark-form-field select {
+        font-size: 14px;
+    }
+    
+    .get-started-dark-consent {
+        gap: 6px;
+    }
+    
+    .get-started-dark-consent label {
+        font-size: 11px;
+    }
+}
+

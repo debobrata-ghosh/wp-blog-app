@@ -1,0 +1,1362 @@
+
+
+:root {
+    --primary-blue: #28323c;
+    --accent-blue: #007ACC;
+    --primary-green: #B4E850;
+    --accent-green-strong: #288410;
+    --text-dark: #28323C;
+    --gray-900: #333333;
+    --gray-700: #666666;
+    --gray-200: #E0E0E0;
+    --surface: #FFFFFF;
+    --radius-8: 8px;
+    --radius-12: 12px;
+    --radius-pill: 100px;
+    --shadow-card-24: 0 4px 24px rgba(0,0,0,0.24);
+}
+
+/* Accessibility focus outline */
+*:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+/* Editor overflow fix for healthcare programs block */
+.block-editor-block-list__layout .healthcare-programs-block,
+.editor-styles-wrapper .healthcare-programs-block,
+.wp-block-acf-healthcare-programs .healthcare-programs-block {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Healthcare Programs Block Styles */
+.healthcare-programs-block {
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.healthcare-hero {
+    background-color: var(--primary-blue);
+    color: white;
+    position: relative;
+}
+
+.healthcare-hero-content {
+    max-width: 1728px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 150px;
+    box-sizing: border-box;
+}
+
+.healthcare-hero-text {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.healthcare-hero h1 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 0;
+    text-align: left;
+    color: #B4E850;
+}
+
+.healthcare-all-programs {
+    position: absolute;
+    top: 80px;
+    right: 138px;
+    z-index: 10;
+}
+
+.healthcare-all-programs a {
+    color: #b4e850;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.healthcare-all-programs a:hover {
+    text-decoration: underline;
+}
+
+.healthcare-all-programs a::after {
+    content: '→';
+    font-size: 0.9rem;
+}
+
+.healthcare-tabs {
+    display: flex;
+    gap: 3px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 40px 0 0px;
+}
+
+.healthcare-tab {
+    background-color: #007ACC;
+    color: #ffffff;
+    padding: 16px 24px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    width: 240px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    gap: 10px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    border-radius: 8px 8px 0px 0px;
+}
+
+/* Icon removed as per design */
+
+.healthcare-tab.active {
+    background-color: #ffffff;
+    color: #007ACC;
+    padding: 32px 24px;
+    font-size: 18px;
+    line-height: 1.44;
+    height: 104px;
+}
+
+.healthcare-tab:not(.active) {
+    background-color: #007ACC;
+    color: #ffffff;
+}
+
+/* Program Details Section */
+.healthcare-program-details {
+    background-color: var(--surface);
+    padding: 60px 0 0 0;
+    box-sizing: border-box;
+}
+
+.healthcare-program-content {
+    max-width: 1728px;
+    margin: 0 auto;
+    padding: 0 150px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.healthcare-program-headline {
+    width: 208px;
+    flex-shrink: 0;
+}
+
+.healthcare-program-headline h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+    margin: 0;
+    color: #007ACC;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.healthcare-program-headline::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 184px;
+    background-color: #ACB4BC;
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
+
+.healthcare-program-headline {
+    position: relative;
+}
+
+.healthcare-program-description-wrapper {
+    width: 510px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.healthcare-program-description p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.33em;
+    margin: 0;
+    color: #28323C;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.healthcare-learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #288410;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25em;
+    padding: 14px 0;
+}
+
+.healthcare-learn-more:hover {
+    text-decoration: underline;
+}
+
+.healthcare-learn-more::after {
+    content: '→';
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.healthcare-stats {
+    width: 272px;
+    flex-shrink: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.healthcare-stats-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.44em;
+    color: #28323C;
+    height: 24px;
+}
+
+.healthcare-stats-rate {
+    font-family: 'Outfit', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.03em;
+    text-transform: uppercase;
+    color: #58A430;
+    height: 64px;
+}
+
+.healthcare-stats-source {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.33em;
+    color: #28323C;
+}
+
+.healthcare-stats-outcomes {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.33em;
+}
+
+.healthcare-stats-outcomes a {
+    color: #28323C;
+    text-decoration: none;
+}
+
+.healthcare-stats-outcomes a:hover {
+    text-decoration: underline;
+}
+
+/* Testimonial Section */
+.healthcare-testimonial {
+    background-color: #ffffff;
+    padding: 80px 0;
+    width: 100%;
+}
+
+.healthcare-testimonial-content {
+    max-width: 1728px;
+    width: 1580px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.healthcare-testimonial-card {
+    background: #ACB4BC;
+    border-radius: 24px;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 1047px;
+    height: 520px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.healthcare-testimonial-content-wrapper {
+    background-color: #ffffff;
+    padding: 24px 55px;
+    border-radius: 12px;
+    margin: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.healthcare-testimonial-quote {
+    width: 50px;
+    height: 40px;
+    flex-shrink: 0;
+    color: #0f0f0f;
+    font-size: 80px;
+    line-height: 40px;
+    font-family: Georgia, serif;
+    display: block;
+}
+
+.healthcare-testimonial-content-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.healthcare-testimonial-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.33em;
+    color: #28323C;
+    margin: 0;
+}
+
+.healthcare-testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+}
+
+.healthcare-testimonial-name {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.44em;
+    color: #28323C;
+}
+
+.healthcare-testimonial-title {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.44em;
+    color: #28323C;
+}
+
+.healthcare-testimonial-read-more {
+    position: absolute;
+    bottom: 24px;
+    right: 80px;
+}
+
+.healthcare-testimonial-read-more a {
+    color: #58A430;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 0;
+}
+
+.healthcare-testimonial-read-more a::after {
+    content: '→';
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.healthcare-testimonial-read-more a:hover {
+    text-decoration: underline;
+}
+
+.healthcare-video-placeholder {
+    background-color: #ACB4BC;
+    border-radius: 24px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 509px;
+    height: 520px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.healthcare-video-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.healthcare-video-placeholder:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.healthcare-video-play {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.healthcare-video-play:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.healthcare-video-play::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 20px solid #2196f3;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    margin-left: 4px;
+}
+
+/* Story Card Section */
+.story-card-section {
+    width: 100%;
+    background: #28323c;
+    position: relative;
+}
+
+.story-card-wrapper {
+    background-color: #ACB4BC;
+    border-radius: 24px;
+    max-width: 1728px;
+    width: 1580px;
+    height: 520px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(-60px);
+    box-sizing: border-box;
+}
+
+.story-card-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.story-card-content {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    width: 550px;
+    height: 488px;
+    padding: 64px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 32px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.story-card-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.story-card-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.03em;
+    text-transform: uppercase;
+    color: #007ACC;
+    margin: 0;
+    width: 379px;
+    height: 123px;
+}
+
+.story-card-description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.33em;
+    color: #28323C;
+    margin: 0;
+    height: 64px;
+}
+
+.story-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #288410;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5em;
+    padding: 14px 0;
+    transition: all 0.3s ease;
+}
+
+.story-card-link::after {
+    content: '→';
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.story-card-link:hover {
+    text-decoration: underline;
+}
+
+.story-card-background {
+    width: 100%;
+    height: 100%;
+    background-color: #ACB4BC;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Block Alignment Support */
+.healthcare-programs-block.alignwide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.healthcare-programs-block.alignfull {
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+/* Fix for editor - prevent overflow */
+.block-editor-block-list__layout .healthcare-programs-block.alignfull,
+.editor-styles-wrapper .healthcare-programs-block.alignfull,
+.wp-block-acf-healthcare-programs .healthcare-programs-block.alignfull {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Video Modal Styles */
+.healthcare-video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.healthcare-video-modal.active {
+    display: flex;
+}
+
+.healthcare-video-modal-content {
+    position: relative;
+    width: 60vw;
+    height: auto;
+    max-width: 60vw;
+    max-height: 90vh;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.healthcare-video-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 10001;
+}
+
+.healthcare-video-modal-close::before {
+    content: '×';
+    font-size: 24px;
+    line-height: 1;
+}
+
+.healthcare-video-modal-close:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+}
+
+.healthcare-video-modal iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: none;
+    border-radius: 8px;
+}
+
+.healthcare-video-modal video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    display: block;
+    border-radius: 8px;
+}
+
+#healthcareVideoContainer {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+    .healthcare-hero-content,
+    .healthcare-program-content {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1350px) {
+    .healthcare-hero-content,
+    .healthcare-program-content,
+    .healthcare-testimonial-content,
+    .story-card-wrapper {
+        padding: 0 80px;
+        max-width: 100%;
+    }
+    
+    /* Hero section responsive */
+    .healthcare-hero {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .healthcare-all-programs {
+        right: 80px; /* Adjusted from 138px */
+    }
+    
+    /* Program details responsive */
+    .healthcare-program-details {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .healthcare-program-content {
+        gap: 30px;
+    }
+    
+    .healthcare-program-headline {
+        width: auto;
+        max-width: 200px;
+    }
+    
+    .healthcare-program-description-wrapper {
+        width: auto;
+        max-width: 450px;
+        flex: 1;
+    }
+    
+    .healthcare-stats {
+        width: auto;
+        max-width: 250px;
+    }
+    
+    /* Testimonial section responsive */
+    .healthcare-testimonial {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .healthcare-testimonial-card {
+        width: 100%;
+        max-width: 600px;
+        flex-shrink: 1;
+    }
+    
+    .healthcare-video-placeholder {
+        width: 100%;
+        max-width: 400px;
+        flex-shrink: 1;
+    }
+    
+    /* Story card section responsive */
+    .story-card-section {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .story-card-wrapper {
+        width: 100%;
+        max-width: calc(100% - 80px);
+        margin: 0 auto;
+    }
+    
+    .story-card-content {
+        width: 500px;
+        max-width: 500px;
+    }
+}
+
+
+
+
+/* Tablet / Medium Screens Breakpoint */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .healthcare-hero-content,
+    .healthcare-program-content,
+    .healthcare-testimonial-content,
+    .story-card-wrapper {
+        padding: 0 80px;
+        max-width: 100%;
+    }
+    
+    /* Fix testimonial section overflow on tablets */
+    .healthcare-testimonial-content {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    
+    .healthcare-testimonial-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 400px;
+    }
+    
+    .healthcare-video-placeholder {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 400px;
+    }
+    
+    /* Adjust program content layout */
+    .healthcare-program-content {
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    .healthcare-program-headline {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .healthcare-program-headline::after {
+        display: none;
+    }
+    
+    .healthcare-program-description-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .healthcare-stats {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Story card adjustments */
+    .story-card-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .story-card-content {
+        width: 60%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .healthcare-hero-content,
+    .healthcare-program-content,
+    .healthcare-testimonial-content,
+    .story-card-wrapper {
+        padding: 0 20px;
+    }
+    
+    .healthcare-hero-text {
+        padding: 10px 0;
+    }
+    
+    .healthcare-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .healthcare-tabs {
+        flex-direction: column;
+        gap: 16px;
+        padding: 30px 16px 40px;
+        margin-top: 50px;
+        align-items: flex-start;
+    }
+    
+    .healthcare-tab {
+        width: 100%;
+        height: 80px;
+        background-color: #007ACC !important;
+        color: #ffffff !important;
+        font-family: 'Outfit', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.44;
+        padding: 0 24px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        box-shadow: 0px 2px 16px 0px rgba(40, 50, 60, 0.16);
+        position: relative;
+    }
+    
+    .healthcare-tab::after {
+        content: '↗';
+        font-size: 24px;
+        line-height: 1;
+        color: #ffffff;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .healthcare-tab.active {
+        background-color: #007ACC !important;
+        color: #ffffff !important;
+        height: 80px;
+        padding: 0 24px !important;
+    }
+    
+    .healthcare-all-programs {
+        position: static;
+        order: 999; /* Move to bottom after all tabs */
+        margin-top: 20px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: auto;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        align-self: flex-start;
+        width: auto;
+    }
+    
+    .healthcare-all-programs a {
+        text-align: left;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+    
+    .healthcare-program-details {
+        display: none !important;
+    }
+    
+    .healthcare-program-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .healthcare-program-headline h2 {
+        font-size: 2rem;
+    }
+    
+    .healthcare-stats-rate {
+        font-size: 3rem;
+    }
+    
+    .healthcare-testimonial {
+        display: none !important;
+    }
+    
+    .healthcare-testimonial-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .healthcare-testimonial-card {
+        min-height: 250px;
+    }
+    
+    .healthcare-testimonial-content-wrapper {
+        padding: 30px;
+        border-radius: 12px;
+    }
+    
+    .healthcare-video-placeholder {
+        padding: 40px;
+        min-height: 250px;
+    }
+    
+    .healthcare-video-play {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .healthcare-video-play::before {
+        border-left: 15px solid #2196f3;
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+    }
+    
+    /* Story Card Mobile Layout */
+    .story-card-section {
+        background: #28323c;
+        padding: 40px 0 40px 0;
+    }
+    
+    .story-card-wrapper {
+        /* max-width: 376px; */
+        width: calc(100% - 40px);
+        height: auto !important;
+        margin: 0 auto;
+        padding: 0;
+        background-color: #ACB4BC;
+        border-radius: 16px;
+        overflow: hidden;
+        transform: translateY(-60px);
+    }
+    
+    .story-card-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto !important;
+        min-height: 572px;
+        position: relative;
+    }
+    
+    /* Background image appears FIRST (top) */
+    .story-card-background {
+        order: 1;
+        width: 100%;
+        height: 286px;
+        min-height: 286px;
+        max-height: 286px;
+        background-color: #ACB4BC;
+        border-radius: 0;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        z-index: 1;
+        margin-bottom: 16px;
+    }
+    
+    /* Content appears SECOND (bottom) - White overlay */
+    .story-card-content {
+        order: 2;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: calc(100% - 32px) !important;
+        height: auto !important;
+        margin: 0 16px 16px 16px;
+        padding: 24px !important;
+        background-color: #FFFFFF;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        justify-content: flex-start;
+        z-index: 2;
+    }
+    
+    .story-card-text-group {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .story-card-heading {
+        font-family: 'Outfit', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1em;
+        text-transform: uppercase;
+        color: #007ACC;
+        margin: 0;
+        height: auto;
+        min-height: 60px;
+    }
+    
+    .story-card-description {
+        font-family: 'Outfit', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.44em;
+        color: #28323C;
+        margin: 0;
+        height: auto;
+        min-height: 78px;
+    }
+    
+    .story-card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 0;
+        font-family: 'Outfit', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5em;
+        color: #288410;
+        text-decoration: none;
+        width: fit-content;
+    }
+    
+    .story-card-link::after {
+        content: '→';
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .healthcare-video-modal {
+        padding: 10px;
+    }
+    
+    .healthcare-video-modal-content {
+        width: 95vw;
+        max-width: 95vw;
+        max-height: 80vh;
+        margin: auto;
+    }
+    
+    .healthcare-video-modal iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+    }
+    
+    .healthcare-video-modal video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+    }
+    
+    .healthcare-video-modal-close {
+        top: -50px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .healthcare-hero-content,
+    .healthcare-program-content,
+    .healthcare-testimonial-content {
+        padding: 0 16px;
+    }
+    
+    .healthcare-hero {
+        padding: 0px 0;
+        min-height: 300px;
+    }
+    
+    .healthcare-hero-text {
+        padding: 10px 0;
+    }
+    
+    .healthcare-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .healthcare-tabs {
+        padding: 0px 0px 0px;
+        gap: 16px;
+        padding-bottom: 50px;
+        align-items: flex-start;
+    }
+    
+    .healthcare-tab {
+        width: 100%;
+        height: 80px;
+        background-color: #007ACC !important;
+        color: #ffffff !important;
+        font-family: 'Outfit', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.44;
+        padding: 0 24px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        box-shadow: 0px 2px 16px 0px rgba(40, 50, 60, 0.16);
+        position: relative;
+    }
+    
+    .healthcare-tab::after {
+        content: '↗';
+        font-size: 24px;
+        line-height: 1;
+        color: #ffffff;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .healthcare-tab.active {
+        background-color: #007ACC !important;
+        color: #ffffff !important;
+        height: 80px;
+        padding: 0 24px !important;
+    }
+    
+    .healthcare-all-programs {
+        position: static;
+        order: 999; /* Move to bottom after all tabs */
+        margin-top: 15px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: auto;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        align-self: flex-start;
+        width: auto;
+    }
+    
+    .healthcare-all-programs a {
+        text-align: left;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+    
+    .healthcare-program-details {
+        display: none !important;
+    }
+    
+    .healthcare-program-headline h2 {
+        font-size: 1.6rem;
+    }
+    
+    .healthcare-stats-rate {
+        font-size: 2.5rem;
+    }
+    
+    .healthcare-testimonial {
+        display: none !important;
+    }
+    
+    .healthcare-testimonial-content-wrapper {
+        padding: 24px;
+        border-radius: 12px;
+    }
+    
+    .healthcare-video-placeholder {
+        padding: 30px;
+        min-height: 200px;
+    }
+    
+    /* Story Card Small Mobile */
+    .story-card-section {
+        padding: 0px 0 0px 0;
+    }
+    
+    .story-card-wrapper {
+        max-width: 376px;
+        width: calc(100% - 32px);
+        height: auto !important;
+        margin: 0 auto;
+        padding: 0;
+        background-color: #ACB4BC;
+        border-radius: 16px;
+        overflow: hidden;
+        transform: translateY(-60px);
+    }
+    
+    .story-card-container {
+        height: auto !important;
+        min-height: 520px;
+    }
+    
+    .story-card-background {
+        order: 1;
+        width: 100%;
+        height: 260px;
+        min-height: 260px;
+        max-height: 260px;
+        background-color: #ACB4BC;
+        border-radius: 0;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        z-index: 1;
+    }
+    
+    .story-card-content {
+        order: 2;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: calc(100% - 32px) !important;
+        height: auto !important;
+        margin: 0 16px 16px 16px;
+        padding: 20px !important;
+        background-color: #FFFFFF;
+        border-radius: 12px;
+        gap: 20px;
+        z-index: 2;
+    }
+    
+    .story-card-text-group {
+        gap: 20px;
+    }
+    
+    .story-card-heading {
+        font-family: 'Outfit', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1em;
+        text-transform: uppercase;
+        color: #007ACC;
+        margin: 0;
+        height: auto;
+        min-height: 55px;
+    }
+    
+    .story-card-description {
+        font-family: 'Outfit', sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.44em;
+        color: #28323C;
+        margin: 0;
+        height: auto;
+        min-height: 70px;
+    }
+    
+    .story-card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 0;
+        font-family: 'Outfit', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5em;
+        color: #288410;
+        text-decoration: none;
+        width: fit-content;
+    }
+    
+    .story-card-link::after {
+        content: '→';
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,448 @@
+/* Editor overflow fix for FAQ block */
+.block-editor-block-list__layout .faq-section-block,
+.editor-styles-wrapper .faq-section-block,
+.wp-block-acf-faq .faq-section-block {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* FAQ Section Block Styles */
+.faq-section-block {
+    width: 100%;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #ffffff; /* White background for the entire block */
+    color: #333333;
+    box-sizing: border-box;
+}
+
+.faq-section-content {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    min-height: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.faq-section-sidebar {
+    background-color: #28323C;
+    padding: 90px 0px 82px 0px;
+    padding-left: max(150px, calc((100vw - 1728px) / 2 + 150px));
+    padding-right: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    box-sizing: border-box;
+    min-width: 0;
+    width: calc(576px + max(0px, (100vw - 1728px) / 2));
+    flex-shrink: 0;
+}
+
+.faq-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 40px; /* Headline Regular 40 per Figma */
+    font-weight: 400; /* Regular weight per Figma */
+    line-height: 1.2em; /* Per Figma */
+    color: #B4E850; /* Base UI-Light per Figma */
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.faq-section-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.faq-category-tab {
+    font-family: 'Outfit', sans-serif;
+    background-color: #28323C; /* Base UI-Four per Figma */
+    color: #ffffff; /* Base UI-Light per Figma */
+    border: none;
+    padding: 18px 20px; /* Padding per Figma */
+    font-size: 16px; /* Body Medium 16 per Figma */
+    font-weight: 500; /* Medium weight per Figma */
+    line-height: 1.5em; /* Per Figma */
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.faq-category-tab:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.faq-category-tab.active {
+    background-color: #ffffff; /* Base UI-Light per Figma */
+    color: #007ACC; /* Primary Two per Figma */
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-top: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.faq-category-tab:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.faq-section-main {
+    background-color: #ffffff;
+    padding: 223px 30px 60px 30px;
+    padding-right: max(150px, calc((100vw - 1728px) / 2 + 150px));
+    position: relative;
+    box-sizing: border-box;
+    min-width: 0;
+    flex: 1;
+}
+
+.faq-accordion-category {
+    display: none;
+}
+
+.faq-accordion-category.active {
+    display: block;
+}
+
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.faq-accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.faq-accordion-item:last-child {
+    border-bottom: none;
+}
+
+.faq-accordion-question {
+    font-family: 'Outfit', sans-serif;
+    background: none;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    width: 100%;
+    padding: 20px 0 20px 30px;
+    font-size: 16px; /* Body Medium 16 per Figma */
+    font-weight: 500; /* Medium weight per Figma */
+    line-height: 1.5em; /* Per Figma */
+    color: #007ACC; /* Primary Two per Figma */
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.faq-accordion-question:hover {
+    color: #005aa3; /* Darker shade of Primary Two for hover */
+}
+
+.faq-accordion-question::before {
+    content: '↓';
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    order: -1;
+}
+
+.faq-accordion-question.active::before {
+    transform: rotate(180deg);
+}
+
+.faq-accordion-question.active {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #F0F1F2; /* Base UI-One per Figma - gray background when active */
+    color: #007ACC; /* Primary Two per Figma */
+}
+
+.faq-accordion-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #ffffff;
+}
+
+.faq-accordion-answer.active {
+    max-height: 500px;
+    background-color: #F0F1F2; /* Base UI-One per Figma - gray background when expanded */
+}
+
+.faq-accordion-answer-content {
+    font-family: 'Outfit', sans-serif;
+    padding: 0 90px 20px 55px;
+    font-size: 16px; /* Body Light 16 per Figma */
+    font-weight: 300; /* Light weight per Figma */
+    line-height: 1.5em; /* Per Figma */
+    color: #28323C; /* Base UI-Four per Figma */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.faq-accordion-answer-content p {
+    margin: 0 0 16px 0;
+}
+
+.faq-accordion-answer-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Block Alignment Support */
+.faq-section-block.alignwide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-section-block.alignfull {
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+/* Fix for editor - prevent overflow */
+.block-editor-block-list__layout .faq-section-block.alignfull,
+.editor-styles-wrapper .faq-section-block.alignfull,
+.wp-block-acf-faq .faq-section-block.alignfull {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Mobile FAQ Expansion Styles */
+.faq-mobile-accordion {
+    display: none; /* Hidden on desktop */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Ensure mobile accordion is hidden on desktop */
+@media (min-width: 769px) {
+    .faq-mobile-accordion {
+        display: none !important;
+        max-height: 0 !important;
+    }
+    
+    .faq-mobile-accordion.active {
+        display: none !important;
+    }
+}
+
+.faq-mobile-accordion.active {
+    display: block;
+    max-height: 5000px;
+}
+
+.faq-mobile-accordion-item {
+    border-bottom: 1px solid #ACB4BC; /* Medium Gray separator per Figma */
+    background-color: transparent;
+}
+
+.faq-mobile-question {
+    font-family: 'Outfit', sans-serif;
+    background-color: #ffffff; /* White background per image */
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    width: 100%;
+    padding: 20px 20px 20px 32px;
+    font-size: 20px; /* Action 20 per Figma mobile */
+    font-weight: 500; /* Medium weight */
+    line-height: 1.4em; /* Per Figma */
+    color: #007ACC; /* Primary Two per Figma */
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px; /* Gap between arrow and text per Figma */
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal;
+    position: relative;
+}
+
+.faq-mobile-question::before {
+    content: '↓';
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    order: -1;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-mobile-question.active::before {
+    transform: rotate(180deg);
+}
+
+.faq-mobile-question.active {
+    background-color: #F0F1F2; /* Light gray background when expanded per image */
+}
+
+.faq-mobile-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #ffffff; /* White background when collapsed */
+}
+
+.faq-mobile-answer.active {
+    max-height: 1000px;
+    background-color: #F0F1F2; /* Light gray background when expanded per image */
+}
+
+.faq-mobile-answer-content {
+    font-family: 'Outfit', sans-serif;
+    padding: 20px 32px 20px 88px; /* Padding per Figma (x: 88 = 32px question + 32px gap + 24px arrow) */
+    font-size: 16px; /* Body Light 16 per Figma */
+    font-weight: 300; /* Light weight per Figma */
+    line-height: 1.5em; /* Per Figma */
+    color: #28323C; /* Base UI-Four per Figma */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.faq-mobile-answer-content p {
+    margin: 0 0 16px 0;
+}
+
+.faq-mobile-answer-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1728px) {
+    .faq-section-sidebar {
+        width: auto;
+        padding-left: 80px;
+        padding-right: 0px;
+    }
+    
+    .faq-section-main {
+        padding-right: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-section-content { flex-direction: column; gap: 0; }
+    .faq-section-sidebar { 
+        width: 100%;
+        padding: 60px 20px 0 20px; 
+        gap: 0; 
+    }
+    .faq-section-title { 
+        font-size: 32px; /* Headline SemiBold 32 per Figma mobile */
+        font-weight: 600; /* SemiBold per Figma */
+        line-height: 1.25em; 
+        color: #B4E850; /* Secondary Three per Figma mobile */
+        margin-bottom: 56px; /* Space to categories */
+    }
+    .faq-section-categories {
+        padding: 0; /* Remove padding to match image */
+        background-color: transparent;
+        gap: 0;
+        margin-bottom: 50px;
+    }
+    .faq-category-tab { 
+        width: 100%;
+        padding: 0;
+        min-height: 56px; /* Standard height for category buttons */
+        font-size: 20px; /* Action 20 / Body Light 20 per Figma */
+        line-height: 1.4em;
+        background-color: #28323C; /* Base UI-Four - black background per image */
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2); /* Thin separator line */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Thin separator line */
+        color: #ffffff; /* Base UI-Light per Figma */
+        font-weight: 300; /* Body Light - default inactive */
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    .faq-category-tab:first-child {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .faq-category-tab:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .faq-category-tab.active {
+        font-weight: 500; /* Action weight - active item */
+        background-color: #ffffff; /* Keep black background */
+        color: #141A1E; /* Base UI-Dark - dark text when active per image */
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-left: 20px;
+    }
+    
+    /* Style mobile accordion items when category is active */
+    .faq-category-tab.active + .faq-mobile-accordion {
+        background-color: #ffffff; /* White background for FAQ items container */
+    }
+    
+    .faq-mobile-accordion-item {
+        background-color: #ffffff; /* White background for collapsed items */
+        border-bottom: 1px solid #ACB4BC; /* Medium Gray separator per Figma */
+    }
+    .faq-category-tab:hover:not(.active) {
+        background-color: rgba(255, 255, 255, 0.05); /* Slight hover effect */
+        opacity: 1;
+    }
+    /* Show mobile accordion, hide desktop accordion */
+    .faq-mobile-accordion { display: block; }
+    .faq-section-main { display: none; /* Hide desktop accordion on mobile */ }
+}
+
+
+/* Editor Preview Styles */
+.wp-block-acf-faq .faq-section-block {
+    border: 2px dashed #ccc;
+    position: relative;
+}
+
+.wp-block-acf-faq .faq-section-block::after {
+    content: "❓ FAQ Section - Interactive categories & accordion";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 8px 12px;
+    font-size: 11px;
+    border-radius: 4px;
+    z-index: 10;
+    font-weight: 500;
+    max-width: 280px;
+    text-align: center;
+    line-height: 1.3;
+}
+

@@ -1,0 +1,309 @@
+/* Editor overflow fix for career block */
+.block-editor-block-list__layout .career-block,
+.editor-styles-wrapper .career-block,
+.wp-block-acf-career .career-block {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Career Block Styles */
+.career-block {
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #28323C; /* Base UI-Four per Figma */
+    box-sizing: border-box;
+}
+
+.career-container {
+    max-width: 1728px;
+    margin: 0 auto;
+    padding: 0 150px;
+    display: flex;
+    min-height: 500px;
+    box-sizing: border-box;
+}
+
+.career-text-column {
+    flex: 0 0 60%;
+    display: flex;
+    align-items: center;
+    padding: 80px 60px 100px 0;
+    position: relative;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.career-content {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.career-headline {
+    font-family: 'Outfit', sans-serif;
+    color: #50D8FF; /* Primary Three per Figma */
+    font-size: 40px; /* Headline Regular 40 per Figma */
+    font-weight: 400; /* Regular, not semibold */
+    line-height: 1.2em; /* Per Figma */
+    margin: 0 0 32px 0; /* 32px gap per Figma */
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.career-subheadline {
+    font-family: 'Outfit', sans-serif;
+    color: #ffffff; /* Base UI-Light per Figma */
+    font-size: 16px; /* Body Light 16 per Figma */
+    font-weight: 300; /* Light weight per Figma */
+    line-height: 1.5em; /* Per Figma */
+    margin: 0;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.career-cards-column {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 80px 0 100px 0;
+    position: relative;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.career-cards-container {
+    width: 100%;
+    max-width: 376px; /* Card width per Figma */
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Gap between cards per Figma (208-120-80=8) */
+}
+
+.career-card {
+    background-color: #ffffff; /* Base UI-Light per Figma */
+    border-radius: 8px; /* Per Figma */
+    padding: 26px 24px; /* Padding from Figma layout (x:24, y:26) */
+    margin-bottom: 0; /* Using gap instead */
+    box-shadow: 0px 2px 16px 0px rgba(40, 50, 60, 0.16); /* Card DS 16 per Figma */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+    width: 376px; /* Card width per Figma */
+    height: 80px; /* Card height per Figma */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.career-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.career-card-title {
+    font-family: 'Outfit', sans-serif;
+    color: #007ACC; /* Primary Two per Figma */
+    font-size: 18px; /* Body Medium 18 per Figma */
+    font-weight: 500; /* Medium weight per Figma */
+    line-height: 1.4444444444444444em; /* Per Figma */
+    margin: 0;
+    flex: 1;
+    word-wrap: break-word;
+    white-space: normal;
+    min-width: 0;
+}
+
+.career-card-arrow {
+    width: 24px; /* Arrow size per Figma */
+    height: 24px; /* Arrow size per Figma */
+    flex-shrink: 0;
+    position: absolute;
+    right: 24px; /* Match card padding, arrow at x:344 in 376px card */
+    top: 10%;
+    transform: translateX(70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.career-card-arrow svg {
+    width: 24px;
+    height: 24px;
+    color: #007ACC; /* Primary Two per Figma */
+}
+
+/* Block Alignment Support */
+.career-block.alignwide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.career-block.alignfull {
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+    .career-container {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .career-container {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .career-block {
+        min-height: 400px;
+    }
+    
+    .career-container {
+        padding: 0 20px;
+        flex-direction: column;
+        min-height: 400px;
+    }
+    
+    .career-text-column {
+        flex: 1;
+        padding: 50px 0 30px 0;
+        min-height: 200px;
+    }
+    
+    .career-cards-column {
+        flex: 1;
+        padding: 40px 0 50px 0;
+        min-height: 200px;
+    }
+    
+    .career-headline {
+        font-size: 32px; /* Responsive scaling */
+        margin-bottom: 32px; /* Maintain gap */
+    }
+    
+    .career-subheadline {
+        font-size: 16px; /* Keep same size */
+    }
+    
+    .career-cards-container {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .career-card {
+        width: 100%;
+        /* max-width: 376px; */
+    }
+}
+
+@media (max-width: 480px) {
+    .career-block {
+        min-height: auto;
+    }
+    
+    .career-container {
+        padding: 0 16px; /* Container padding per Figma */
+        min-height: auto;
+        flex-direction: column;
+    }
+    
+    .career-text-column {
+        padding: 60px 0 0 0; /* y:60 per Figma */
+        min-height: auto;
+        width: 100%;
+        max-width: 344px; /* Text column width per Figma */
+        margin: 0 auto;
+    }
+    
+    .career-content {
+        width: 344px; /* Text column width per Figma */
+    }
+    
+    .career-cards-column {
+        padding: 32px 0 40px 0; /* Gap between text and cards */
+        min-height: auto;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .career-cards-container {
+        width: 376px; /* Card width per Figma mobile */
+        gap: 8px; /* Gap between cards per Figma (546-458-80=8) */
+    }
+    
+    .career-headline {
+        font-size: 32px; /* Headline Regular 32 per Figma mobile */
+        line-height: 1.25em; /* Per Figma */
+        font-weight: 400; /* Regular weight */
+        color: #50D8FF; /* Primary Three per Figma */
+        margin-bottom: 32px; /* Gap per Figma */
+    }
+    
+    .career-subheadline {
+        font-size: 16px; /* Body Light 16 per Figma */
+        line-height: 1.5em; /* Per Figma */
+        font-weight: 300; /* Light weight */
+        color: #ffffff; /* Base UI-Light per Figma */
+    }
+    
+    .career-card {
+        padding: 26px 24px; /* Padding per Figma (x:24, y:26) */
+        margin-bottom: 0; /* Using gap */
+        width: 376px; /* Card width per Figma mobile */
+        height: 80px; /* Card height per Figma */
+        min-height: 80px;
+    }
+    
+    .career-card-title {
+        font-size: 18px; /* Body Medium 18 per Figma */
+        line-height: 1.4444444444444444em; /* Per Figma */
+        font-weight: 500; /* Medium weight */
+        color: #007ACC; /* Primary Two per Figma */
+    }
+    
+    .career-card-arrow {
+        right: 24px; /* Arrow position per Figma (x:344 in 376px card) */
+        top: 8px; /* Arrow position per Figma (y:8) */
+        transform: none; /* Reset transform */
+    }
+}
+
+/* Editor Preview Styles */
+.wp-block-acf-career .career-block {
+    border: 2px dashed #ccc;
+    position: relative;
+}
+
+.wp-block-acf-career .career-block::after {
+    content: "💼 Career Services Section - Text content & navigation cards";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 8px 12px;
+    font-size: 11px;
+    border-radius: 4px;
+    z-index: 10;
+    font-weight: 500;
+    max-width: 280px;
+    text-align: center;
+    line-height: 1.3;
+}
+

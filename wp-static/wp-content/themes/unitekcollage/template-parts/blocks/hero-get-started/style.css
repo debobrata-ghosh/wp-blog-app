@@ -1,0 +1,946 @@
+/**
+ * Hero Get Started Block - Frontend Styles
+ * Multi-step form with campus and program selection
+ */
+
+/* Hero Get Started Block Styles - Matching Figma Design */
+.hero-get-started-block {
+    width: 60%;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #28323C; /* Base UI-Four from Figma */
+    border-radius: 8px; /* 8px from Figma */
+    padding: 20px 20px;
+    margin: -55px auto 0 auto;
+    max-width: 1200px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 4px 24px 0px rgba(40, 50, 60, 0.24); /* Card DS 24 from Figma */
+}
+
+.hero-get-started-block.alignwide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-get-started-block.alignfull {
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.hero-get-started-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 56px;
+}
+
+.hero-get-started-text {
+    flex-shrink: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px; /* Headline Regular 32 from Figma */
+    font-weight: 400; /* Regular weight from Figma */
+    line-height: 1.25em; /* 1.25em from Figma */
+    color: #ffffff; /* Base UI-Light from Figma */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    min-width: fit-content;
+    height: 56px;
+}
+
+.hero-get-started-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    max-width: 700px;
+}
+
+/* Input and Select Styles - Matching Figma Design */
+.hero-get-started-select,
+.hgs-input, 
+.hgs-select {
+    flex: 1;
+    padding: 16px; /* 16px padding from Figma */
+    border: 1px solid #ACB4BC; /* Medium Gray from Figma */
+    border-radius: 8px; /* 8px from Figma */
+    background-color: #ffffff; /* Base UI-Light - white background when unselected from Figma */
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px; /* Body Light 18 / Body Medium 18 from Figma */
+    font-weight: 300; /* Light weight for placeholder from Figma */
+    line-height: 1.4444em; /* 1.4444em from Figma */
+    color: #68747C; /* Base UI-Three for placeholder from Figma */
+    min-height: 56px;
+    box-sizing: border-box;
+}
+
+/* When select/input has a value selected or filled, change background to transparent/dark and text to white */
+.hgs-select:has(option:checked:not([disabled]):not([value=""])) {
+    background-color: transparent; /* Transparent to show dark form background */
+    color: #ffffff; /* White text when value selected */
+    font-weight: 500; /* Body Medium 18 from Figma */
+}
+
+/* Populated input - transparent background with white text */
+.hgs-input:not(:placeholder-shown):not([value=""]) {
+    background-color: transparent; /* Transparent to show dark form background */
+    color: #ffffff !important; /* Base UI-Light from Figma */
+    font-weight: 500 !important; /* Body Medium 18 from Figma */
+}
+
+.hgs-select option {
+    color: #ffffff; /* White text for options */
+    background-color: #28323C; /* Dark background */
+    font-weight: 500;
+}
+
+/* When select has a selected value, make text white */
+.hgs-select:has(option:checked:not([disabled])) {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.hero-get-started-select,
+.hgs-select {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2368747C' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 16px center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    padding-right: 48px;
+}
+
+/* Change arrow color to white when select has a value */
+.hgs-select:has(option:checked:not([disabled]):not([value=""])) {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+}
+
+.hero-get-started-select::placeholder,
+.hgs-select::placeholder,
+.hgs-input::placeholder {
+    color: #68747C; /* Base UI-Three from Figma */
+    opacity: 1;
+}
+
+.hero-get-started-select option:disabled,
+.hgs-select option:disabled {
+    color: #68747C; /* Base UI-Three from Figma */
+}
+
+.hero-get-started-select:focus,
+.hgs-select:focus,
+.hgs-input:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+.hero-get-started-select option,
+.hgs-select option {
+    padding: 12px;
+    color: #ffffff; /* White text for options in dark form */
+    background-color: #28323C; /* Dark background for dropdown */
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 500; /* Medium weight when selected */
+}
+
+/* Selected option text color */
+.hgs-select:focus,
+.hgs-select:active {
+    color: #ffffff; /* White when focused/active */
+    font-weight: 500;
+}
+
+/* Button Styles - Matching Figma Design */
+.hero-get-started-button {
+    padding: 14px 24px; /* Padding from Figma */
+    border: none;
+    border-radius: 100px; /* 100px from Figma */
+    background-color: #68747C; /* Base UI-Three (disabled state) from Figma */
+    color: #28323C; /* Base UI-Four from Figma */
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px; /* Action 18 from Figma */
+    font-weight: 500; /* Medium weight from Figma */
+    line-height: 1.333em; /* 1.333em from Figma */
+    cursor: not-allowed;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    min-width: 168px; /* Button width from Figma */
+    box-sizing: border-box;
+}
+
+.hero-get-started-button.active {
+    background-color: #B4E850; /* Secondary Three from Figma */
+    color: #28323C; /* Base UI-Four from Figma */
+    cursor: pointer;
+}
+
+.hero-get-started-button.active:hover {
+    background-color: #9FD240; /* Slightly lighter green on hover */
+    transform: translateY(-1px);
+}
+
+/* Multi-step Layout */
+.hgs-steps { 
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    gap: 10px; 
+    width: 100%; 
+}
+
+.hgs-row { 
+    display: flex; 
+    align-items: center; 
+    gap: 16px; 
+    width: 100%; 
+}
+
+.hgs-actions { 
+    display: flex; 
+    gap: 12px; 
+    flex-shrink: 0; 
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.hgs-progress { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    width: 79%; 
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-top: 0px;
+}
+
+.hgs-progress-bar {
+    background: #ACB4BC; /* Medium Gray from Figma */
+    height: 8px; /* 8px from Figma */
+    width: 100%;
+    border-radius: 999px;
+    overflow: hidden;
+    box-shadow: inset 0px 4px 4px 0px rgba(140, 148, 154, 0.08); /* Shadow from Figma */
+}
+
+.hgs-progress-bar > span {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #B4E850; /* Progress fill color from Figma */
+    border-radius: 999px;
+    transition: width 200ms ease;
+}
+
+.hgs-progress-text {
+    color: #ffffff; /* Base UI-Light from Figma */
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px; /* Body Light 12 from Figma */
+    font-weight: 300; /* Light weight from Figma */
+    line-height: 1.333em; /* 1.333em from Figma */
+    text-align: left; /* Text align left from Figma (Multi-Step Form Dark Submit) */
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+
+/* Step Styles */
+.hgs-step { 
+    display: none !important; 
+    gap: 16px; 
+    align-items: center; 
+    flex: 1; 
+    width: 100%;
+    min-height: 56px;
+    height: 56px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.hgs-step.active { 
+    display: flex !important; 
+    align-items: center;
+    height: 56px;
+}
+
+/* Step 6 specific layout (email + consent + submit) */
+.hgs-step[data-step="6"] {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    min-height: auto;
+    gap: 16px;
+}
+
+.hgs-step[data-step="6"].active {
+    height: auto;
+}
+
+.hgs-step-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.hgs-step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.hgs-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px; /* Gap from Figma */
+    color: #DADEE0; /* Base UI-Two from Figma */
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px; /* Body Light 12 from Figma */
+    font-weight: 300; /* Light weight from Figma */
+    line-height: 1.333em; /* 1.333em from Figma */
+    width: 100%;
+}
+
+.hgs-consent span {
+    color: #DADEE0; /* Base UI-Two from Figma */
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.333em;
+}
+
+.hgs-consent input[type="checkbox"] {
+    width: 24px; /* Checkbox size from Figma */
+    height: 24px;
+    min-width: 24px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.hgs-step[data-step="6"] .hgs-input {
+    flex: 1;
+}
+
+.hgs-step[data-step="6"] .hgs-consent {
+    width: 100%;
+}
+
+.hgs-step[data-step="6"] .hero-get-started-button {
+    flex-shrink: 0;
+}
+
+.hgs-back {
+    background: transparent;
+    color: #DADEE0; /* Base UI-Two from Figma */
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px; /* Body Light 12 from Figma */
+    font-weight: 300; /* Light weight from Figma */
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.hgs-back:hover {
+    color: #ffffff; /* Lighten on hover */
+}
+
+/* Confirmation Message Styles - Matching Figma Design */
+.confirmation-message {
+    background-color: #28323C; /* Base UI-Four from Figma */
+    border-radius: 8px; /* 8px from Figma */
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 1000px; /* Width from Figma */
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.confirmation-message h2 {
+    color: #ffffff; /* Base UI-Light from Figma */
+    font-family: 'Outfit', sans-serif;
+    font-size: 40px; /* Headline Regular 40 from Figma */
+    font-weight: 400; /* Regular weight from Figma */
+    line-height: 1.2em; /* 1.2em from Figma */
+    margin: 0 0 32px 0; /* Spacing based on Figma layout */
+    text-align: left;
+}
+
+.confirmation-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px; /* Spacing between message and link */
+}
+
+.confirmation-msg {
+    margin: 0;
+    flex: 1;
+}
+
+.confirmation-message p {
+    color: #ffffff; /* Base UI-Light */
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px; /* Body Light 16 from Figma */
+    font-weight: 300; /* Light weight from Figma */
+    line-height: 1.5em; /* 1.5em from Figma */
+    margin: 0;
+    text-align: left;
+}
+
+.phone-number {
+    color: #ffffff; /* Same as body text */
+    font-weight: 300; /* Light weight */
+}
+
+.contact-details {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Gap between text and arrow from Figma */
+    padding: 14px 0; /* Padding from Figma */
+    flex-shrink: 0;
+}
+
+.contact-link {
+    color: #B4E850; /* Secondary Three from Figma */
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px; /* Action 16 from Figma */
+    font-weight: 500; /* Medium weight from Figma */
+    line-height: 1.25em; /* 1.25em from Figma */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Gap for arrow icon */
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: #9FD240; /* Slightly lighter green on hover */
+    text-decoration: none;
+}
+
+/* Arrow icon for contact link */
+.contact-link::after {
+    content: '→';
+    display: inline-block;
+    width: 24px; /* Icon size from Figma */
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Hidden Elements */
+.hgs-controls,
+.hgs-hidden { 
+    display: none !important; 
+}
+
+/* Desktop: Hide mobile submit button */
+#hgs-submit-mobile {
+    display: none !important;
+}
+
+@media (min-width: 1200px) and (max-width: 1350px) {
+    /* Main container */
+    .hero-get-started-block {
+        width: 85%;
+        max-width: 1100px;
+        margin: -55px auto 0 auto;
+        padding: 20px;
+    }
+    
+    /* Content wrapper */
+    .hero-get-started-content {
+        gap: 18px;
+        max-width: 1100px;
+    }
+    
+    /* Headline text */
+    .hero-get-started-text {
+        font-size: 30px;
+        min-width: fit-content;
+    }
+    
+    /* Form wrapper */
+    .hero-get-started-form {
+        max-width: 680px;
+        gap: 16px;
+    }
+    
+    /* Steps layout */
+    .hgs-steps {
+        gap: 10px;
+    }
+    
+    /* Input and select fields */
+    .hero-get-started-select,
+    .hgs-select,
+    .hgs-input {
+        padding: 15px;
+        font-size: 18px;
+        min-height: 56px;
+    }
+    
+    /* Button */
+    .hero-get-started-button {
+        padding: 14px 24px;
+        font-size: 18px;
+        min-width: 165px;
+    }
+    
+    /* Progress bar section */
+    .hgs-progress {
+        width: 78%;
+        gap: 12px;
+    }
+    
+    .hgs-progress-bar {
+        height: 8px;
+    }
+    
+    .hgs-progress-text {
+        font-size: 12px;
+        margin-left: 12px;
+    }
+    
+    /* Back button */
+    .hgs-back {
+        font-size: 12px;
+        margin-right: 12px;
+    }
+    
+    /* Step rows */
+    .hgs-row {
+        gap: 16px;
+    }
+    
+    .hgs-step-row {
+        gap: 16px;
+    }
+    
+    /* Consent section */
+    .hgs-consent {
+        font-size: 12px;
+        gap: 8px;
+    }
+    
+    .hgs-consent span {
+        font-size: 12px;
+    }
+    
+    .hgs-consent input[type="checkbox"] {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+    }
+    
+    /* Confirmation message */
+    .confirmation-message {
+        max-width: 1000px;
+    }
+    
+    .confirmation-message h2 {
+        font-size: 38px;
+        margin-bottom: 30px;
+    }
+    
+    .confirmation-message p {
+        font-size: 16px;
+    }
+    
+    .confirmation-content {
+        gap: 22px;
+    }
+    
+    .contact-link {
+        font-size: 16px;
+    }
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .hero-get-started-block{
+        width: 90%;
+        max-width: 980px;
+        margin: -60px auto 0 auto;
+        padding: 20px;
+    }
+}
+
+
+
+/* Desktop: Show desktop submit button */
+@media (min-width: 769px) {
+    .hgs-step[data-step="6"] .hgs-step-row .hero-get-started-button {
+        display: flex !important;
+    }
+    
+    #hgs-submit-mobile {
+        display: none !important;
+    }
+}
+
+/* 1280px and below */
+@media (max-width: 1280px) {
+    .hero-get-started-block {
+        width: 70%;
+        padding: 20px 40px;
+    }
+}
+
+/* Tablet (769px–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-get-started-block {
+        width: 90%;
+        max-width: 980px;
+        margin: -60px auto 0 auto;
+        padding: 20px;
+    }
+
+    .hero-get-started-content {
+        gap: 16px;
+    }
+
+    .hero-get-started-text {
+        font-size: 28px;
+        height: auto;
+        min-width: auto;
+    }
+
+    .hero-get-started-form {
+        max-width: 640px;
+    }
+
+    .hgs-steps {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        gap: 12px;
+    }
+
+    .hgs-progress {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .hgs-actions .hero-get-started-button {
+        min-width: 160px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-get-started-block {
+        width: 100%;
+        padding: 20px 16px;
+        margin: -60px 20px 0 20px;
+        max-width: calc(100% - 40px);
+    }
+    
+    .hero-get-started-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        text-align: left;
+    }
+    
+    .hero-get-started-text {
+        font-size: 32px;
+        text-align: center;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .hero-get-started-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        max-width: none;
+        margin-left: 0;
+    }
+    
+    /* Mobile: Restructure grid layout - Next button below progress bar */
+    .hgs-steps {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 16px;
+    }
+    
+    .hgs-step {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+    }
+    
+    .hgs-progress {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+        margin-top: 0;
+        order: 2;
+    }
+    
+    .hgs-actions {
+        grid-column: 1;
+        grid-row: 3;
+        width: 100%;
+        justify-content: stretch;
+        order: 3;
+    }
+    
+    .hgs-actions .hero-get-started-button {
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    /* Step 6 mobile layout - Email input only, button moves below progress bar */
+    .hgs-step[data-step="6"] .hgs-step-row {
+        display: block;
+        width: 100%;
+    }
+    
+    .hgs-step[data-step="6"] .hgs-step-row .hgs-input {
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    .hgs-step[data-step="6"] .hgs-step-row .hero-get-started-button {
+        display: none !important; /* Hide submit button in step-row on mobile */
+    }
+    
+    /* Hide Next button and show submit button in actions area on final step mobile */
+    .hgs-step[data-step="6"].active ~ .hgs-actions #hgs-next {
+        display: none !important;
+    }
+    
+    .hgs-step[data-step="6"].active ~ .hgs-actions #hgs-submit-mobile {
+        display: flex !important;
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    /* Confirmation message mobile layout */
+    .confirmation-content {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .confirmation-msg {
+        width: 100%;
+    }
+    
+    .contact-details {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-get-started-block {
+        padding: 20px 16px;
+        border-radius: 8px;
+        margin: -20px 16px 0 16px;
+        max-width: calc(100% - 32px);
+    }
+    
+    .hero-get-started-text {
+        font-size: 28px;
+        line-height: 1.25em;
+    }
+    
+    .hero-get-started-select,
+    .hgs-select,
+    .hgs-input {
+        padding: 16px;
+        font-size: 18px;
+    }
+    
+    .hero-get-started-button {
+        padding: 14px 24px;
+        font-size: 18px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    /* Main container */
+    .hero-get-started-block {
+        padding: 16px 12px;
+        border-radius: 6px;
+        margin: -20px 12px 0 12px;
+        max-width: calc(100% - 24px);
+    }
+    
+    /* Content wrapper */
+    .hero-get-started-content {
+        gap: 16px;
+    }
+    
+    /* Headline text */
+    .hero-get-started-text {
+        font-size: 22px;
+        line-height: 1.3em;
+        min-height: auto;
+        height: auto;
+    }
+    
+    /* Form wrapper */
+    .hero-get-started-form {
+        gap: 12px;
+    }
+    
+    /* Steps layout */
+    .hgs-steps {
+        gap: 12px;
+    }
+    
+    /* All inputs and selects */
+    .hero-get-started-select,
+    .hgs-select,
+    .hgs-input {
+        padding: 12px;
+        font-size: 16px;
+        min-height: 48px;
+        width: 100%;
+    }
+    
+    /* Select dropdown arrow positioning */
+    .hero-get-started-select,
+    .hgs-select {
+        background-position: right 12px center;
+        background-size: 18px;
+        padding-right: 36px;
+    }
+    
+    /* Button styles */
+    .hero-get-started-button {
+        padding: 12px 20px;
+        font-size: 16px;
+        min-height: 48px;
+        min-width: 100%;
+        width: 100%;
+    }
+    
+    /* Progress bar section */
+    .hgs-progress {
+        gap: 8px;
+        width: 100%;
+    }
+    
+    .hgs-progress-bar {
+        height: 6px;
+    }
+    
+    .hgs-progress-text {
+        font-size: 11px;
+        margin-left: 8px;
+    }
+    
+    /* Back button */
+    .hgs-back {
+        font-size: 11px;
+        gap: 3px;
+        margin-right: 8px;
+    }
+    
+    /* Step 6 - Email input step */
+    .hgs-step[data-step="6"] {
+        gap: 12px;
+    }
+    
+    .hgs-step-row {
+        gap: 12px;
+    }
+    
+    /* Consent checkbox and text */
+    .hgs-consent {
+        gap: 6px;
+        font-size: 11px;
+        line-height: 1.4em;
+    }
+    
+    .hgs-consent span {
+        font-size: 11px;
+        line-height: 1.4em;
+    }
+    
+    .hgs-consent input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+    }
+    
+    /* Actions area */
+    .hgs-actions {
+        gap: 8px;
+    }
+    
+    /* Confirmation message */
+    .confirmation-message {
+        margin-top: 16px;
+        padding: 0;
+    }
+    
+    .confirmation-message h2 {
+        font-size: 28px;
+        line-height: 1.25em;
+        margin: 0 0 20px 0;
+    }
+    
+    .confirmation-message p {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+    
+    .confirmation-content {
+        gap: 16px;
+    }
+    
+    .contact-link {
+        font-size: 14px;
+        gap: 6px;
+    }
+    
+    .contact-link::after {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 18px;
+    }
+    
+    .contact-details {
+        padding: 12px 0;
+        gap: 6px;
+    }
+}
+

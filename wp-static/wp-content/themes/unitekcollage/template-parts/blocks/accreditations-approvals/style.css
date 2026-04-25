@@ -1,0 +1,337 @@
+/* Editor overflow fix for accreditations approvals block */
+.block-editor-block-list__layout .accreditations-approvals-block,
+.editor-styles-wrapper .accreditations-approvals-block,
+.wp-block-acf-accreditations-approvals .accreditations-approvals-block {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Accreditations & Approvals Block Styles */
+.accreditations-approvals-block {
+    width: 100%;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5;
+    padding: 100px 0;
+    color: #333333;
+    box-sizing: border-box;
+}
+
+.accreditations-approvals-content {
+    max-width: 1728px;
+    margin: 0 auto;
+    padding: 0 150px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+    box-sizing: border-box;
+}
+
+.accreditations-approvals-left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.accreditations-approvals-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #333333;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.accreditations-approvals-description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666666;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.accreditations-approvals-right {
+    position: relative;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.accreditations-approvals-view-all {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    z-index: 10;
+}
+
+.accreditations-approvals-view-all a {
+    color: #007ACC; /* Primary Two per Figma */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
+    padding: 8px 0; /* Match Figma spacing */
+}
+
+
+
+.accreditations-approvals-view-all a::after {
+    content: '→';
+    font-size: 1.5rem; /* ~24px arrow size */
+}
+
+.accreditations-approvals-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+.accreditations-approvals-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.accreditations-approvals-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 1px;
+    background-color: #e0e0e0;
+}
+
+.accreditations-approvals-item-logo {
+    margin-bottom: 16px;
+    max-width: 100px;
+    height: auto;
+    width: 100%;
+}
+
+.accreditations-approvals-item-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Desktop-only: add initial left divider on the first item */
+@media (min-width: 769px) {
+    .accreditations-approvals-items .accreditations-approvals-item:first-child {
+        border-left: 1px solid #ACB4BC;
+    }
+    .accreditations-approvals-items .accreditations-approvals-item {
+        border-right: 1px solid #ACB4BC;
+    }
+    .accreditations-approvals-items .accreditations-approvals-item:last-child {
+        border-right: none;
+    }
+}
+
+.accreditations-approvals-item-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #333333;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.accreditations-approvals-item-description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    color: #666666;
+    margin: 0;
+    line-height: 1.4;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Block Alignment Support */
+.accreditations-approvals-block.alignwide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accreditations-approvals-block.alignfull {
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+/* Fix for editor - prevent overflow */
+.block-editor-block-list__layout .accreditations-approvals-block.alignfull,
+.editor-styles-wrapper .accreditations-approvals-block.alignfull,
+.wp-block-acf-accreditations-approvals .accreditations-approvals-block.alignfull {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+    .accreditations-approvals-content {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .accreditations-approvals-content {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .accreditations-approvals-block {
+        padding: 80px 0;
+        background-color: #F0F1F2; /* Figma Base UI-One */
+    }
+    
+    .accreditations-approvals-content {
+        padding: 0 20px;
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    /* Stack right column content so we can move the view-all to the bottom */
+    .accreditations-approvals-right {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+    
+    .accreditations-approvals-title {
+        font-size: 2rem;
+        line-height: 1.333em;
+    }
+    
+    .accreditations-approvals-view-all {
+        order: 2; /* Place after items */
+        position: static;
+        margin: 0; /* reset */
+        text-align: left; /* Bottom-left alignment */
+    }
+    
+    .accreditations-approvals-items {
+        order: 1;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .accreditations-approvals-item:not(:last-child)::after {
+        display: none;
+    }
+    
+    .accreditations-approvals-item {
+        padding: 20px 0;
+        border-bottom: 1px solid #ACB4BC; /* Medium Gray per Figma */
+    }
+    
+    /* Add initial divider line before the first item */
+    .accreditations-approvals-item:first-child {
+        border-top: 1px solid #ACB4BC;
+    }
+    
+    .accreditations-approvals-item:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .accreditations-approvals-block {
+        padding: 60px 0;
+    }
+    
+    .accreditations-approvals-content {
+        padding: 0 16px;
+        gap: 40px;
+    }
+    
+    .accreditations-approvals-left {
+        gap: 32px; /* Figma gap between title and copy */
+    }
+    
+    .accreditations-approvals-title {
+        font-size: 32px; /* Figma mobile Headline 32 */
+        line-height: 1.25em;
+        font-weight: 600;
+        color: #28323C; /* Base UI-Four per Figma */
+    }
+
+    .accreditations-approvals-description {
+        font-size: 16px; /* Figma mobile */
+        line-height: 1.5em;
+        font-weight: 300; /* Body Light per Figma */
+        color: #28323C; /* Base UI-Four per Figma */
+    }
+    
+    .accreditations-approvals-item {
+        padding: 16px 0;
+        align-items: flex-start;
+    }
+    
+    .accreditations-approvals-item-logo {
+        /* max-width: 184px; */
+        margin-bottom: 12px;
+    }
+
+    .accreditations-approvals-item-logo img {
+        max-height: 80px; /* Match Figma logo height */
+        width: auto;
+    }
+
+    .accreditations-approvals-item-title,
+    .accreditations-approvals-item-description {
+        font-size: 14px; /* Action 14 per Figma */
+        line-height: 1.4285714286em;
+        color: #28323C; /* Base UI-Four */
+        font-weight: 500; /* Action weight */
+        text-align: left;
+        width: 184px;
+    }
+}
+
+/* Editor Preview Styles */
+.wp-block-acf-accreditations-approvals .accreditations-approvals-block {
+    border: 2px dashed #ccc;
+    position: relative;
+}
+
+.wp-block-acf-accreditations-approvals .accreditations-approvals-block::after {
+    content: "🏆 Accreditations & Approvals - Institution credentials & logos";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 8px 12px;
+    font-size: 11px;
+    border-radius: 4px;
+    z-index: 10;
+    font-weight: 500;
+    max-width: 280px;
+    text-align: center;
+    line-height: 1.3;
+}
+
