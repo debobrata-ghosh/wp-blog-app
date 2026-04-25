@@ -1,0 +1,588 @@
+/* Editor overflow fix */
+.block-editor-block-list__layout .home-overview-block,
+.editor-styles-wrapper .home-overview-block,
+.wp-block-acf-home-overview .home-overview-block {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Home Overview Block */
+.home-overview-block {
+    width: 100%;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff;
+    padding: 100px 0 150px;
+    box-sizing: border-box;
+}
+
+.home-overview-content {
+    max-width: 1728px;
+    margin: 0 auto;
+    padding: 0 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+    box-sizing: border-box;
+}
+
+.home-overview-left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 552px;
+    box-sizing: border-box;
+}
+
+.home-overview-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    /* max-width: 584px; */
+    box-sizing: border-box;
+}
+
+/* Typography */
+.home-overview-headline {
+    font-family: 'Outfit', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2em;
+    color: #58A430;
+    margin: 0;
+}
+
+.home-overview-description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: #28323C;
+    margin: 0;
+}
+
+.home-overview-description p {
+    margin: 0 0 20px 0;
+}
+
+.home-overview-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Statistics */
+.home-overview-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 536px;
+    padding: 0;
+    border-bottom: 1px solid #DADEE0;
+    box-sizing: border-box;
+    gap: 0;
+}
+
+.home-overview-stat:last-child {
+    border-bottom: none;
+}
+
+.home-overview-stat-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-overview-stat-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.03125em;
+    color: #ACB4BC; /* Increased contrast on white for WCAG AA */
+    width: 176px;
+    height: 72px;
+    text-transform: uppercase;
+    margin: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.home-overview-stat-description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    width: 248px;
+    flex-shrink: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+.home-overview-stat-description:focus {
+    outline: none;
+    border: none;
+}
+
+.home-overview-stat-description:focus .home-overview-stat-text {
+    border: none;
+    outline: none;
+}
+
+.home-overview-stat-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: #141A1E;
+    width: 208px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    outline: none;
+}
+
+.home-overview-stat-arrow {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: #4caf50;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Expanded State */
+.home-overview-stat.expanded .home-overview-stat-arrow {
+    transform: rotate(180deg);
+}
+
+.home-overview-stat.expanded .home-overview-stat-value {
+    color: #58A430;
+}
+
+.home-overview-stat.expanded .home-overview-stat-row {
+    background-color: #F0F1F2;
+    width: 570px;
+    padding: 20px 24px;
+    box-sizing: border-box;
+}
+
+.home-overview-stat.expanded .home-overview-stat-description {
+    width: calc(100% - 193px);
+    align-items: flex-start;
+}
+
+.home-overview-stat.expanded .home-overview-stat-text {
+    width: auto;
+    height: auto;
+    flex: 1;
+    max-width: none;
+}
+
+.home-overview-stat-content {
+    display: none;
+    width: 570px;
+    background-color: #F0F1F2;
+    padding: 0 20px 20px 220px;
+    margin: 0;
+    box-sizing: border-box;
+    animation: slideDown 0.3s ease;
+}
+
+.home-overview-stat.expanded .home-overview-stat-content {
+    display: block;
+}
+
+.home-overview-stat-expanded-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: #141A1E;
+}
+
+.home-overview-stat.expanded .home-overview-stat-text,
+.home-overview-stat-expanded-text,
+.home-overview-stat-read-more {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.home-overview-stat-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #288410;
+    text-decoration: none;
+    padding: 14px 0;
+    transition: color 0.2s ease;
+}
+
+.home-overview-stat-read-more:hover {
+    color: #58A430;
+    text-decoration: none;
+}
+
+.home-overview-stat-read-more svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.home-overview-stat-read-more:hover svg {
+    transform: translateX(4px);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 500px;
+    }
+}
+
+/* Block Alignment */
+.home-overview-block.alignwide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-overview-block.alignfull {
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.block-editor-block-list__layout .home-overview-block.alignfull,
+.editor-styles-wrapper .home-overview-block.alignfull,
+.wp-block-acf-home-overview .home-overview-block.alignfull {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Responsive */
+@media (max-width: 1280px) {
+    .home-overview-content {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home-overview-content {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .home-overview-content {
+        padding: 0 40px;
+        gap: 60px; /* Reduce gap from 100px to 60px */
+    }
+    
+    .home-overview-left {
+        max-width: 100%; /* Remove fixed max-width */
+    }
+    
+    .home-overview-right {
+        max-width: 100%; /* Remove fixed max-width */
+    }
+    
+    .home-overview-stat {
+        width: 100%; /* Make stat full width of container */
+        max-width: 100%;
+    }
+    
+    .home-overview-stat.expanded .home-overview-stat-row {
+        width: 100%; /* Ensure expanded state fits */
+        max-width: 100%;
+    }
+    
+    .home-overview-stat-content {
+        width: 100%; /* Ensure expanded content fits */
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .home-overview-block {
+        padding: 80px 0 60px;
+    }
+    
+    .home-overview-content {
+        padding: 0 20px;
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+    
+    .home-overview-left {
+        /* max-width: 329px; Mobile width from Figma */
+        gap: 24px; /* 24px gap from Figma */
+        max-width: 100%;
+    }
+    
+    .home-overview-right {
+        /* max-width: 376px; Container width from Figma */
+        align-items: center; /* Center alignment from Figma */
+        gap: 16px; /* 16px gap from Figma */
+    }
+    
+    .home-overview-headline {
+        font-size: 24px; /* Headline Regular 24 from Figma */
+        line-height: 1.333em; /* 1.333em from Figma */
+    }
+    
+    .home-overview-description {
+        font-size: 16px; /* Body Light 16 from Figma */
+        font-weight: 300; /* Light weight from Figma */
+        line-height: 1.5em; /* 1.5em from Figma */
+    }
+    
+    .home-overview-stat {
+        width: 100%;
+        flex-direction: column; /* Column layout from Figma */
+        flex-wrap: nowrap;
+        gap: 0;
+        padding: 0;
+        align-items: stretch;
+    }
+    
+    .home-overview-stat-row {
+        width: 100%;
+        flex-direction: column; /* Column layout on mobile from Figma */
+        gap: 0;
+        padding: 0;
+        align-items: stretch;
+    }
+    
+    .home-overview-stat-value {
+        font-size: 64px; /* Display Bold 64 from Figma */
+        width: 100%;
+        height: 72px; /* Height from Figma */
+        min-width: auto;
+    }
+    
+    .home-overview-stat-description {
+        width: 100%;
+        max-width: none;
+        gap: 92px; /* Gap between text and arrow from Figma */
+        justify-content: space-between;
+        align-self: stretch;
+    }
+    
+    .home-overview-stat-text {
+        width: 208px; /* Text width from Figma */
+        height: 72px; /* Height from Figma */
+        max-width: 208px;
+    }
+    
+    .home-overview-stat.expanded .home-overview-stat-text {
+        width: auto;
+        height: auto;
+        max-width: none;
+        flex: 1;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .home-overview-stat-arrow {
+        width: 24px; /* Arrow size from Figma */
+        height: 24px; /* Arrow size from Figma */
+    }
+    
+    .home-overview-stat-content {
+        /* width: 344px; Match stat width on mobile */
+        padding: 0 20px 20px 20px; /* Simplified padding for mobile */
+    }
+    
+    .home-overview-stat.expanded .home-overview-stat-row {
+        /* width: 344px; Match stat width on mobile */
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+    
+    .home-overview-stat.expanded .home-overview-stat-description {
+        width: 100%;
+        max-width: none;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-overview-block {
+        padding: 60px 0 130px;
+    }
+    
+    .home-overview-content {
+        padding: 0 16px;
+        gap: 60px;
+    }
+    
+    .home-overview-left {
+        max-width: 100%;
+    }
+    
+    .home-overview-right {
+        max-width: 100%;
+        align-items: center;
+    }
+    
+    .home-overview-headline {
+        font-size: 24px; /* Headline Regular 24 from Figma */
+        line-height: 1.333em;
+    }
+    
+    .home-overview-stat {
+        width: 344px; /* Match Figma width */
+        max-width: calc(100% - 32px); /* Responsive but maintain structure */
+    }
+    
+    .home-overview-stat-value {
+        font-size: 64px; /* Keep Display Bold 64 from Figma */
+        height: 72px;
+    }
+    
+    .home-overview-stat-content {
+        width: 100%;
+        max-width: 344px;
+        padding: 0 20px 20px 20px;
+    }
+    
+    .home-overview-stat.expanded .home-overview-stat-row {
+        width: 100%;
+        max-width: 344px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+    
+    .home-overview-stat.expanded .home-overview-stat-description {
+        width: 100%;
+        max-width: none;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .home-overview-stat.expanded .home-overview-stat-text {
+        width: auto;
+        height: auto;
+        max-width: none;
+        flex: 1;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+}
+
+/* Editor Preview */
+.wp-block-acf-home-overview .home-overview-block {
+    border: 2px dashed #ccc;
+    position: relative;
+}
+
+.wp-block-acf-home-overview .home-overview-block::after {
+    content: "🏠 Home Overview Section - Headline, description & statistics";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 8px 12px;
+    font-size: 11px;
+    border-radius: 4px;
+    z-index: 10;
+    font-weight: 500;
+    max-width: 280px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+@media (max-width: 320px) {
+    .home-overview-block {
+        padding: 40px 0;
+    }
+    
+    .home-overview-content {
+        padding: 0 12px;
+        gap: 40px;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .home-overview-left {
+        max-width: 100%;
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .home-overview-right {
+        max-width: 100%;
+        width: 100%;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .home-overview-headline {
+        font-size: 20px;
+        line-height: 1.3em;
+    }
+    
+    .home-overview-description {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+    
+    .home-overview-stat {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .home-overview-stat-value {
+        font-size: 48px;
+        height: auto;
+    }
+    
+    .home-overview-stat-text {
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+    }
+    
+    .home-overview-stat-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px 16px 16px;
+    }
+    
+    .home-overview-stat.expanded .home-overview-stat-row {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+    }
+}
+

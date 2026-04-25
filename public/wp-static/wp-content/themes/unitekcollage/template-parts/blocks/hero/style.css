@@ -1,0 +1,209 @@
+/**
+ * Hero Block - Frontend Styles
+ * Matching Figma Design
+ */
+
+.hero-block {
+    width: 100%;
+    min-height: 560px;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.hero-container {
+    display: flex;
+    min-height: 560px;
+    width: 100%;
+}
+
+.hero-text-column {
+    flex: 0 0 42.82%; /* 740px / 1728px from Figma */
+    background-color: #074975; /* Primary One from Figma */
+    display: flex;
+    align-items: flex-start;
+    padding: 120px 0 0 150px; /* Standard 150px left padding */
+    position: relative;
+}
+
+/* Align content with 1728px container on large screens */
+@media (min-width: 1729px) {
+    .hero-text-column {
+        padding-left: calc((100vw - 1728px) / 2 + 150px); /* Dynamic padding to align with centered 1728px container */
+    }
+}
+
+.hero-content {
+    max-width: 448px; /* Content width from Figma */
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Gap between headline and subheadline from Figma */
+}
+
+.hero-headline {
+    color: #ffffff; /* Base UI-Light from Figma */
+    font-family: 'Outfit', sans-serif;
+    font-size: 48px; /* Headline Regular 48 from Figma */
+    font-weight: 400; /* Regular weight from Figma */
+    line-height: 1.1667em; /* 56px / 48px from Figma */
+    margin: 0;
+    text-align: left;
+}
+
+.hero-subheadline {
+    color: #50D8FF; /* Primary Three from Figma */
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px; /* Headline Regular 24 from Figma */
+    font-weight: 400; /* Regular weight from Figma */
+    line-height: 1.333em; /* 32px / 24px from Figma */
+    margin: 0;
+    text-align: left;
+}
+
+.hero-image-column {
+    flex: 0 0 57.18%; /* 988px / 1728px from Figma */
+    background-color: #ACB4BC; /* Medium Gray from Figma */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-image-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ACB4BC; /* Medium Gray from Figma */
+}
+
+.placeholder-text {
+    color: #68747C; /* Base UI-Three from Figma */
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+/* Block Alignment Support */
+.hero-block.alignwide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-block.alignfull {
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+    .hero-text-column {
+        padding: 120px 0 0 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-text-column {
+        padding: 60px 0 0 80px; /* Tablet padding - viewport smaller than 1728px */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-block {
+        min-height: 400px;
+    }
+    
+    .hero-container {
+        flex-direction: column;
+        min-height: 400px;
+    }
+    
+    .hero-text-column {
+        flex: 1;
+        padding: 60px 40px;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        gap: 20px;
+    }
+    
+    .hero-image-column {
+        flex: 1;
+        min-height: 300px;
+    }
+    
+    .hero-headline {
+        font-size: 36px;
+        line-height: 1.1667em;
+    }
+    
+    .hero-subheadline {
+        font-size: 20px;
+        line-height: 1.333em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-block {
+        min-height: auto;
+    }
+    
+    .hero-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .hero-text-column {
+        padding: 40px 32px 0 32px; /* x: 32px, y: 40px from Figma mobile */
+        min-height: auto;
+        order: 1;
+    }
+    
+    .hero-content {
+        max-width: 329px; /* Content width from Figma mobile */
+        gap: 16px; /* Gap from Figma mobile */
+    }
+    
+    .hero-image-column {
+        min-height: 222px; /* Image height from Figma mobile */
+        order: 2;
+    }
+    
+    .hero-headline {
+        font-size: 32px; /* Headline Regular 32 from Figma mobile */
+        font-weight: 400; /* Regular weight from Figma */
+        line-height: 1.25em; /* 1.25em from Figma mobile */
+    }
+    
+    .hero-subheadline {
+        font-size: 18px; /* Body Light 18 from Figma mobile */
+        font-weight: 300; /* Light weight from Figma mobile */
+        line-height: 1.4444em; /* 1.4444em from Figma mobile */
+        color: #50D8FF; /* Primary Three from Figma */
+        margin-bottom: 30px;
+    }
+}
+

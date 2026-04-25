@@ -1,0 +1,445 @@
+/* Editor overflow fix for nursing programs block */
+.block-editor-block-list__layout .nursing-programs,
+.editor-styles-wrapper .nursing-programs,
+.wp-block-acf-nursing-programs .nursing-programs {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Nursing Programs Block Styles */
+.nursing-programs {
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header Section with Tabs */
+.nursing-programs__header {
+    background-color: #DADEE0;
+    padding: 24px 0 0;
+    box-sizing: border-box;
+}
+
+.nursing-programs__header-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px 80px 0px 80px;
+    box-sizing: border-box;
+}
+
+.nursing-programs__title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 20px 0;
+    text-transform: none;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.nursing-programs__tabs {
+    display: flex;
+    gap: 0;
+    align-items: flex-end;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.nursing-programs__tab {
+    background-color: #0074CC;
+    color: #ffffff;
+    padding: 14px 30px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal;
+    margin-left: 1px;
+}
+
+.nursing-programs__tab.active {
+    background-color: #1a365d;
+    padding-bottom: 20px;
+}
+
+.nursing-programs__tab:hover:not(.active) {
+    background-color: #005a9c;
+}
+
+/* Main Content Section */
+.nursing-programs__content {
+    background-color: #1a365d;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.nursing-programs__content-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px 80px 70px;
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Left 1/3, Right 2/3 */
+    gap: 60px;
+    align-items: start;
+    box-sizing: border-box;
+}
+
+/* Left Column */
+.nursing-programs__left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* min-width removed to allow 1/3 width layout */
+    box-sizing: border-box;
+}
+
+.nursing-programs__top-content {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.nursing-programs__image {
+    width: 350px;
+    height: 300px;
+    background-color: #7a8a9a;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 13px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.nursing-programs__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.nursing-programs__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.nursing-programs__headline {
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #ffffff;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.nursing-programs__description {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #ffffff;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.nursing-programs__description p {
+    margin: 0 0 16px 0;
+}
+
+.nursing-programs__description p:last-child {
+    margin-bottom: 0;
+}
+
+.nursing-programs__buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.nursing-programs__button {
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.nursing-programs__button--primary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1.5px solid #ffffff;
+}
+
+.nursing-programs__button--primary:hover {
+    background-color: #ffffff;
+    color: #00618a;
+}
+
+.nursing-programs__button--secondary {
+    background-color: #0091d5;
+    color: #ffffff;
+    border: 1.5px solid transparent;
+}
+
+.nursing-programs__button--secondary:hover {
+    background-color: #0076b3;
+    transform: translateY(-1px);
+}
+
+/* Right Column */
+.nursing-programs__right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 8px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.nursing-programs__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    box-sizing: border-box;
+}
+
+.nursing-programs__details-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 18px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.nursing-programs__details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nursing-programs__details-item {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.nursing-programs__locations {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    box-sizing: border-box;
+}
+
+.nursing-programs__locations-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 18px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.nursing-programs__locations-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nursing-programs__locations-item {
+    margin: 0;
+}
+
+.nursing-programs__locations-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.7;
+    transition: opacity 0.2s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.nursing-programs__locations-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Separator Line */
+.nursing-programs__separator {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 60px auto;
+    max-width: 1440px;
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+
+/* Block Alignment Support */
+.nursing-programs.alignwide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nursing-programs.alignfull {
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+/* Fix for editor - prevent overflow */
+.block-editor-block-list__layout .nursing-programs.alignfull,
+.editor-styles-wrapper .nursing-programs.alignfull,
+.wp-block-acf-nursing-programs .nursing-programs.alignfull {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+    .nursing-programs__header-container,
+    .nursing-programs__content-container,
+    .nursing-programs__separator {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nursing-programs__header-container,
+    .nursing-programs__content-container,
+    .nursing-programs__separator {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nursing-programs__header-container,
+    .nursing-programs__content-container,
+    .nursing-programs__separator {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .nursing-programs__tabs {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+    
+    .nursing-programs__tab {
+        text-align: center;
+        border-radius: 0;
+    }
+    
+    .nursing-programs__tab.active {
+        padding-bottom: 16px;
+    }
+    
+    .nursing-programs__content-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .nursing-programs__top-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nursing-programs__headline {
+        font-size: 1.75rem;
+    }
+    
+    .nursing-programs__buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .nursing-programs__button {
+        justify-content: center;
+    }
+    
+    .nursing-programs__separator {
+        margin: 40px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .nursing-programs__header-container,
+    .nursing-programs__content-container,
+    .nursing-programs__separator {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .nursing-programs__headline {
+        font-size: 1.5rem;
+    }
+    
+    .nursing-programs__image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .nursing-programs__tab {
+        padding: 14px 20px;
+        font-size: 13px;
+    }
+}
+
+/* Editor Preview Styles */
+.wp-block-acf-nursing-programs .nursing-programs {
+    border: 2px dashed #ccc;
+    position: relative;
+}
+
+.wp-block-acf-nursing-programs .nursing-programs::after {
+    content: "🩺 Nursing Programs Section - Interactive tabs with program details";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 8px 12px;
+    font-size: 11px;
+    border-radius: 4px;
+    z-index: 10;
+    font-weight: 500;
+    max-width: 280px;
+    text-align: center;
+    line-height: 1.3;
+}
+

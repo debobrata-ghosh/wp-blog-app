@@ -1,0 +1,69 @@
+/**
+ * Testimonial Block - Frontend Styles
+ */
+
+.testimonial-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.testimonial-block img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.testimonial-block blockquote {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+}
+
+.testimonial-block blockquote p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #28323C;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+.testimonial-block cite {
+    display: block;
+    font-size: 16px;
+    color: #68747C;
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* Block Alignment Support */
+.testimonial-block.alignwide {
+    max-width: 1200px;
+}
+
+.testimonial-block.alignfull {
+    max-width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-block {
+        padding: 30px 16px;
+    }
+    
+    .testimonial-block blockquote p {
+        font-size: 16px;
+    }
+    
+    .testimonial-block cite {
+        font-size: 14px;
+    }
+}
+
