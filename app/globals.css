@@ -24,3 +24,46 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Minimal Gutenberg block layout helpers (for wp/v2 rendered HTML). */
+.wp-content :where(.wp-block-columns) {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .wp-content :where(.wp-block-columns) {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: start;
+  }
+}
+
+.wp-content :where(.wp-block-column) {
+  min-width: 0;
+}
+
+.wp-content :where(.wp-block-image img, .wp-block-cover img) {
+  height: auto;
+  max-width: 100%;
+}
+
+.wp-content :where(.wp-block-buttons) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.wp-content :where(.wp-block-button__link) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.6rem 1.1rem;
+  text-decoration: none;
+}
+
+.wp-content :where(.wp-block-separator) {
+  border: 0;
+  border-top: 1px solid color-mix(in oklab, currentColor 20%, transparent);
+}
