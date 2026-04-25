@@ -25,6 +25,17 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const basePath = process.env.NODE_ENV === "production" ? "/wp-blog-app" : "";
+
+  const localizeWpAsset = (url: string) => {
+    const normalized = url.trim();
+    const localPrefix = "http://localhost/unitek-rebuild/";
+    if (process.env.NODE_ENV !== "production") return normalized;
+    if (!normalized.startsWith(localPrefix)) return normalized;
+    const rel = normalized.slice(localPrefix.length);
+    return `${basePath}/wp-static/${rel}`;
+  };
+
   const options = await fetchUnitekThemeOptions();
 
   const topBarEnabled =
@@ -113,14 +124,14 @@ export default async function RootLayout({
       <head>
         <link rel="stylesheet" href={wpBlockLibraryCss} />
         <link rel="stylesheet" href={wpBlockLibraryThemeCss} />
-        {wpThemeCss ? <link rel="stylesheet" href={wpThemeCss} /> : null}
+        {wpThemeCss ? <link rel="stylesheet" href={localizeWpAsset(wpThemeCss)} /> : null}
         {extraStylesheets.map((href) => (
-          <link key={href} rel="stylesheet" href={href} />
+          <link key={href} rel="stylesheet" href={localizeWpAsset(href)} />
         ))}
       </head>
       <body className="min-h-full flex flex-col bg-zinc-50 text-zinc-950 dark:bg-black dark:text-zinc-50">
         {extraScripts.map((src) => (
-          <Script key={src} src={src} strategy="afterInteractive" />
+          <Script key={src} src={localizeWpAsset(src)} strategy="afterInteractive" />
         ))}
 
         <a href="#main-content" className="skip-link">
